@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Enhanced SEO Meta Tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="author" content="Chauke Group Holdings" />
+  <meta name="language" content="English" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Chauke Group Holdings — Driving Excellence Through Diversification</title>
+  <meta name="description" content="Chauke Group Holdings (CGH) — A diversified South African holding company delivering infrastructure, engineering, logistics, security, energy and business services. Learn about our services, partnerships and contact details." />
+  <meta name="keywords" content="Chauke Group Holdings, Chauke, investment company, infrastructure, logistics, security, energy, South Africa, business services, engineering, professional services" />
+  <link rel="canonical" href="https://chaukegroup.com/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Chauke Group Holdings — Driving Excellence Through Diversification" />
+  <meta property="og:description" content="A diversified holding company delivering infrastructure, engineering, logistics, security, energy and business services." />
+  <meta property="og:image" content="assets/images/og-image.webp" />
+  <meta property="og:url" content="https://chaukegroup.com/" />
+  <meta property="og:site_name" content="Chauke Group Holdings" />
+  <meta property="og:locale" content="en_ZA" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Chauke Group Holdings" />
+  <meta name="twitter:description" content="Strategic investments and operational excellence across multiple sectors." />
+  <meta name="twitter:image" content="assets/images/og-image.webp" />
+  <meta name="twitter:site" content="@ChaukeGroup" />
+
+  <!-- Google Fonts - More Professional Selection -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Enhanced Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
+  <link rel="manifest" href="assets/favicon/site.webmanifest">
+  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#c89a42">
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+  <meta name="msapplication-TileColor" content="#c89a42">
+  <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#c89a42">
+
+  <!-- --- Critical / Themed CSS --- -->
+  <style>
+    /* === Brand colors extracted from logo === */
+    :root{
+      --gold: #C89A42;
+      --gold-2: #D8B56A;
+      --gold-light: #EAD4A5;
+      --gold-dark: #A3782F;
+      --gold-darker: #8A6325;
+
+      --text: #0D0D0D;
+      --bg: #FFFFFF;
+      --card: #FAFAFA;
+      --muted: #6F6F6F;
+      --border: #E8E8E8;
+      --shadow: rgba(0, 0, 0, 0.08);
+
+      --radius: 12px;
+      --transition: 0.35s ease;
+      --transition-slow: 0.5s ease;
+    }
+
+    /* Dark theme override */
+    :root.dark {
+      --text: #FFFFFF;
+      --bg: #121212;
+      --card: #1E1E1E;
+      --muted: #BDBDBD;
+      --border: #333333;
+      --shadow: rgba(255, 255, 255, 0.05);
+    }
+
+    /* Auto apply system preference (initial) */
+    @media (prefers-color-scheme: dark){
+      :root{ color-scheme: dark; }
+      html:not(.no-auto-theme) { --text: #FFFFFF; --bg:#121212; --card:#1E1E1E; --muted:#BDBDBD; --border:#333; --shadow: rgba(255, 255, 255, 0.05); }
+    }
+
+    /* Reset */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      transition: background var(--transition), color var(--transition);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    a{color:inherit; text-decoration: none;}
+    img{max-width:100%;height:auto;display:block}
+
+    /* Layout container */
+    .container{max-width:1200px;margin:0 auto;padding:0 20px}
+
+    /* Enhanced Sticky Header */
+    header[role="banner"]{
+      position:fixed;
+      top:0;
+      left:0;
+      width:100%;
+      z-index:1100;
+      backdrop-filter: blur(12px) saturate(180%);
+      background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(18,18,18,0.95));
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+      transition: all var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translateY(0);
+    }
+    header[role="banner"].scrolled {
+      background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(18,18,18,0.97));
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    :root:not(.dark) header[role="banner"]{
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
+    }
+    :root:not(.dark) header[role="banner"].scrolled {
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.97));
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    }
+
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:20px;padding:14px 0;
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    /* Increased logo size */
+    .brand img{height:70px;width:auto;display:block; transition: transform 0.3s ease;}
+    .brand:hover img { transform: scale(1.05); }
+    .brand h1{font-family:"Montserrat",serif;font-size:20px;margin:0;color:var(--gold);letter-spacing:1px;font-weight:700}
+
+    /* Nav links */
+    .nav-links{display:flex;gap:26px;align-items:center}
+    .nav-links a{
+      font-weight:600;
+      color:var(--text);
+      padding:8px 12px;
+      border-radius:8px;
+      transition:all .3s; 
+      position: relative;
+      font-family: "Montserrat", sans-serif;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+    }
+    .nav-links a:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: all 0.3s ease;
+      transform: translateX(-50%);
+    }
+    .nav-links a:hover{color:var(--gold);}
+    .nav-links a:hover:after { width: 80%; }
+    .nav-actions{display:flex;gap:12px;align-items:center}
+
+    /* Mobile */
+    .mobile-toggle{display:none;background:transparent;border:0;font-size:20px;color:var(--text);padding:8px;border-radius:8px; transition: all 0.3s;}
+    .mobile-toggle:hover { background: rgba(200, 154, 66, 0.1); }
+    @media (max-width:880px){
+      .nav-links{display:none}
+      .mobile-toggle{display:inline-block}
+    }
+
+    /* Hero - Centered Content */
+    .hero{
+      padding: 180px 0 120px;
+      position:relative;
+      color:white;
+      background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.75) 100%), url("assets/images/hero.webp") center/cover no-repeat;
+      overflow: hidden;
+      text-align: center;
+      margin-top: 0;
+    }
+    .hero:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(200,154,66,0.15) 0%, transparent 70%);
+      z-index: 1;
+    }
+    .hero .container {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeInUp 1s ease-out;
+    }
+    .hero h2{
+      font-family:"Montserrat",serif;
+      font-size: 56px;
+      margin: 0 0 24px;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      font-weight: 800;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    .hero p{
+      max-width:720px;
+      color:rgba(255,255,255,0.92);
+      margin:0 auto 40px;
+      font-size: 20px;
+      line-height: 1.7;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+    .hero .cta{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      justify-content: center;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content: center;
+      gap: 10px;
+      padding:16px 32px;
+      border-radius:12px;
+      font-weight:600;
+      cursor:pointer;
+      border:0;
+      background:var(--gold);
+      color:#000;
+      text-decoration:none;
+      box-shadow:0 8px 25px rgba(200,154,66,0.25);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      font-family: "Montserrat", sans-serif;
+      font-size: 16px;
+      min-width: 180px;
+    }
+    .btn:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    .btn:hover:after {
+      width: 300px;
+      height: 300px;
+    }
+    .btn:hover {
+      transform:translateY(-5px);
+      box-shadow: 0 15px 30px rgba(200,154,66,0.35);
+    }
+    .btn.secondary{
+      background:transparent;
+      color:var(--gold);
+      border:2px solid rgba(200,154,66,0.4);
+      backdrop-filter: blur(8px);
+    }
+    .btn.secondary:hover{
+      background:rgba(200,154,66,0.15);
+      border-color: var(--gold);
+    }
+
+    /* Intro stats */
+    .stats{
+      background:var(--bg);
+      padding:80px 0;
+      border-top:1px solid var(--border);
+      border-bottom:1px solid var(--border);
+      position: relative;
+    }
+    .stats:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(200,154,66,0.05), transparent);
+    }
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:30px;
+      align-items:center;
+      position: relative;
+      z-index: 1;
+    }
+    .stat{
+      padding:30px 20px;
+      text-align:center;
+      transition: transform 0.3s ease;
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    .stat:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px var(--shadow);
+    }
+    .stat h3{
+      font-size:48px;
+      margin:0;
+      color:var(--gold);
+      font-weight: 700;
+      font-family: "Montserrat", sans-serif;
+    }
+    .stat p{
+      margin:10px 0 0;
+      color:var(--muted);
+      font-weight:600;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+    }
+
+    /* Sections */
+    section.content{padding:100px 0}
+    .section-title{text-align:center;margin-bottom:60px}
+    .section-title h3{
+      color:var(--gold);
+      font-family:"Montserrat",serif;
+      font-size:42px;
+      margin:0 0 15px;
+      position: relative;
+      display: inline-block;
+      font-weight: 700;
+    }
+    .section-title h3:after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
+      border-radius: 4px;
+    }
+    .section-title p{color:var(--muted);margin-top:20px; font-size: 18px; max-width: 600px; margin-left: auto; margin-right: auto;}
+
+    /* Overview / About grid */
+    .overview-grid{
+      display:grid;
+      grid-template-columns:1fr 460px;
+      gap:50px;
+      align-items:center;
+    }
+    .overview-grid .text p{color:var(--muted);line-height:1.7; margin-bottom: 24px; font-size: 17px;}
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 10px 40px var(--shadow);
+      transition: all 0.4s ease;
+    }
+    .card:hover {
+      box-shadow: 0 20px 50px var(--shadow);
+      transform: translateY(-8px);
+    }
+
+    /* Services grid */
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+    }
+    .service-card{
+      padding:40px;
+      border-radius:20px;
+      background:linear-gradient(135deg,var(--card),rgba(0,0,0,0.02));
+      border:1px solid var(--border);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    .service-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s ease;
+    }
+    .service-card:hover:before {
+      transform: scaleX(1);
+    }
+    .service-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 50px rgba(0,0,0,0.12);
+      border-color:var(--gold-light);
+    }
+    .service-card .icon{
+      font-size:48px;
+      color:var(--gold);
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover .icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+    .service-card h4{
+      margin:15px 0 20px;
+      color:var(--gold-2);
+      font-size: 22px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+    .service-card p{color:var(--muted);margin:0; line-height: 1.7; font-size: 16px;}
+
+    /* Partnership (dark) */
+    .partnership{
+      padding:100px 0;
+      background:linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url("assets/images/partnership.webp") center/cover no-repeat;
+      color:#fff;
+      border-radius:0;
+      margin-top:40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .partnership:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, rgba(200,154,66,0.15) 0%, transparent 70%);
+    }
+    .partnership .inner{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:50px;
+      align-items:center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Vision / Mission */
+    .vm-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+      gap:40px;
+    }
+    .vm-card{
+      padding:40px;
+      background:var(--card);
+      border-radius:20px;
+      border:1px solid var(--border);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      height: 100%;
+    }
+    .vm-card:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(200,154,66,0.05), transparent);
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    .vm-card:hover:before {
+      opacity: 1;
+    }
+    .vm-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px var(--shadow);
+    }
+    .vm-card h4{
+      margin:15px 0 20px;
+      color:var(--gold);
+      font-size: 26px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+    .vm-card p {
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    /* Values */
+    .values-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    /* Contact Info Cards (Replacing Form) */
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
+    .contact-card {
+      padding: 40px 30px;
+      background: var(--card);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px var(--shadow);
+      border-color: var(--gold);
+    }
+    .contact-card .icon {
+      font-size: 48px;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .contact-card h4 {
+      color: var(--gold);
+      margin: 15px 0 10px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+    }
+    .contact-card p {
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .contact-card a {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--gold);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .contact-card a:hover {
+      color: var(--gold-dark);
+    }
+
+    /* Social Links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--gold);
+      font-size: 20px;
+      transition: all 0.3s ease;
+    }
+    .social-links a:hover {
+      background: var(--gold);
+      color: #000;
+      transform: translateY(-5px);
+      border-color: var(--gold);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+    .project-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--card);
+      border: 1px solid var(--border);
+      transition: all 0.4s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 50px var(--shadow);
+    }
+    .project-image {
+      height: 240px;
+      background-size: cover;
+      background-position: center;
+      background-color: #2a2a2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      position: relative;
+      overflow: hidden;
+    }
+    .project-image:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.7));
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .project-card:hover .project-image:after {
+      opacity: 1;
+    }
+    .project-content {
+      padding: 30px;
+    }
+    .project-content h4 {
+      margin: 0 0 15px;
+      color: var(--gold);
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .project-content p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .timeline:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 3px;
+      background: linear-gradient(to bottom, var(--gold), var(--gold-2));
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 50px;
+      width: 50%;
+      padding-right: 50px;
+    }
+    .timeline-item:nth-child(even) {
+      margin-left: 50%;
+      padding-right: 0;
+      padding-left: 50px;
+    }
+    .timeline-content {
+      padding: 30px;
+      background: var(--card);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 10px 30px var(--shadow);
+      transition: all 0.4s ease;
+    }
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px var(--shadow);
+    }
+    .timeline-content h4 {
+      margin: 0 0 15px;
+      color: var(--gold);
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+    }
+    .timeline-content p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      right: -10px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 4px solid var(--bg);
+      box-shadow: 0 0 0 3px var(--gold);
+    }
+    .timeline-item:nth-child(even):before {
+      right: auto;
+      left: -10px;
+    }
+
+    /* Placeholder images */
+    .placeholder {
+      background: linear-gradient(45deg, var(--border), var(--card));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-weight: 500;
+      text-align: center;
+      padding: 20px;
+    }
+    .placeholder.hero {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .placeholder.large {
+      height: 400px;
+      border-radius: 20px;
+    }
+    .placeholder.medium {
+      height: 300px;
+      border-radius: 20px;
+    }
+    .placeholder.small {
+      height: 200px;
+      border-radius: 20px;
+    }
+
+    /* Utility */
+    .muted{color:var(--muted)}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+    
+    /* Enhanced Scroll to top button */
+    .scroll-top {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(200,154,66,0.3);
+      transition: all 0.4s ease;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+      border: none;
+      font-size: 20px;
+    }
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    .scroll-top:hover {
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 15px 40px rgba(200,154,66,0.4);
+    }
+    
+    /* Loading animation */
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+    .loading.hide {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loader {
+      width: 70px;
+      height: 70px;
+      border: 5px solid rgba(200,154,66,0.2);
+      border-top: 5px solid var(--gold);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 20px;
+    }
+    .loading-text {
+      color: var(--gold);
+      font-family: "Montserrat", sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    
+    /* Animations */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    /* Enhanced CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, rgba(200,154,66,0.1) 0%, rgba(200,154,66,0.05) 100%);
+      border-radius: 30px;
+      padding: 60px;
+      margin: 60px 0;
+    }
+    
+    /* Original Footer Design */
+    footer.site-footer{
+      padding:70px 0 30px;
+      background:linear-gradient(180deg,#050505,#000);
+      color:#ddd;
+      position: relative;
+    }
+    footer.site-footer:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:30px;
+      margin-bottom: 40px;
+    }
+    .footer-grid a{color:inherit; transition: color 0.3s;}
+    .footer-grid a:hover { color: var(--gold); }
+    .small{font-size:14px;color:var(--muted)}
+    
+    /* Design Credit */
+    .design-credit {
+      text-align: center;
+      margin-top: 15px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    .design-credit a {
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .design-credit a:hover {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+    
+    @media (max-width:880px){
+      .overview-grid, .partnership .inner{grid-template-columns:1fr}
+      .hero h2{font-size:40px}
+      .brand h1{display:none}
+      .section-title h3 { font-size: 32px; }
+      .brand img { height: 60px; }
+      .hero {
+        padding: 140px 0 80px;
+      }
+      .nav-links a {
+        font-size: 14px;
+      }
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .cta-section {
+        padding: 40px 20px;
+      }
+      .timeline:before {
+        left: 30px;
+      }
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+      }
+      .timeline-item:nth-child(even) {
+        margin-left: 0;
+        padding-left: 70px;
+      }
+      .timeline-item:before {
+        left: 20px;
+        right: auto;
+      }
+      .timeline-item:nth-child(even):before {
+        left: 20px;
+      }
+    }
+    
+    /* Hover Effects */
+    .hover-lift {
+      transition: transform 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-5px);
+    }
+    
+    /* Gradient Text */
+    .gradient-text {
+      background: linear-gradient(90deg, var(--gold), var(--gold-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+
+  <!-- Enhanced JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Chauke Group Holdings",
+    "url": "https://chaukegroup.com/",
+    "logo": "https://chaukegroup.com/assets/images/logo.png",
+    "foundingDate": "2009",
+    "founders": [{
+      "@type": "Person",
+      "name": "John Chauke"
+    }],
+    "numberOfEmployees": "50",
+    "description": "Chauke Group Holdings is a diversified South African holding company delivering infrastructure, engineering, logistics, security, energy and business services.",
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+27-000-0000",
+      "contactType": "customer service",
+      "areaServed": "ZA",
+      "availableLanguage": ["English"]
+    }],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Business District",
+      "addressLocality": "Johannesburg",
+      "addressRegion": "Gauteng",
+      "postalCode": "2000",
+      "addressCountry": "ZA"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/chaukegroup",
+      "https://twitter.com/ChaukeGroup",
+      "https://facebook.com/ChaukeGroup"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading" id="loading">
+    <div class="loader"></div>
+    <div class="loading-text">Loading Chauke Group Holdings</div>
+  </div>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- HEADER -->
+  <header role="banner" aria-label="Site header" id="mainHeader">
+    <div class="container nav">
+      <div class="brand" aria-hidden="false">
+        <!-- Logo size increased to 70px -->
+        <img src="./logo.png" alt="Chauke Group Holdings - Diversified Business Solutions" width="180" height="70" />
+        <h1 class="sr-only">Chauke Group Holdings</h1>
+      </div>
+
+      <nav role="navigation" aria-label="Primary navigation" class="nav-links" id="mainNav">
+        <a href="#home">Home</a>
+        <a href="#overview">Overview</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">History</a>
+        <a href="#partnership">Partnership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme toggle commented out as per original code -->
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav" title="Open menu">
+          <i class="fas fa-bars" aria-hidden="true"></i>
+          <span class="sr-only">Open Menu</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="home" role="main">
+    <!-- HERO - Centered Content -->
+    <section class="hero" aria-label="Hero" style="background-image: url(''); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="hero-content">
+          <h2>DRIVING EXCELLENCE THROUGH DIVERSIFICATION</h2>
+          <p>Chauke Group Holdings is a dynamic, multidisciplinary company committed to delivering a broad spectrum of professional services across various sectors — infrastructure, engineering, logistics, energy, security and business operations.</p>
+
+          <div class="cta">
+            <a class="btn" href="#services">
+              <span>Explore Our Services</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+            <a class="btn secondary" href="#contact">
+              <span>Contact Us</span>
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="Company statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat">
+            <h3 class="count" data-target="15">15</h3>
+            <p>Years of Excellence</p>
+          </div>
+          <div class="stat">
+            <h3 class="count" data-target="120">120</h3>
+            <p>Projects Completed</p>
+          </div>
+          <div class="stat">
+            <h3 class="count" data-target="50">50</h3>
+            <p>Dedicated Team Members</p>
+          </div>
+          <div class="stat">
+            <h3 class="count" data-target="4">4</h3>
+            <p>Core Business Divisions</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section id="overview" class="content" aria-labelledby="overviewTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="overviewTitle">Company Overview</h3>
+          <p class="muted">Delivering excellence through diversified operations and strategic partnerships.</p>
+        </div>
+
+        <div class="overview-grid">
+          <div class="text">
+            <div class="card">
+              <p>Chauke Group Holdings is a dynamic, multidisciplinary company committed to delivering a broad spectrum of professional services across various sectors. Our business model is built on flexibility, innovation, and strategic partnerships, allowing us to adapt to diverse client needs and market demands.</p>
+              <p>We continuously evolve and expand into new industries where we can add value and drive growth, positioning ourselves as a versatile partner for businesses seeking comprehensive solutions. With over 15 years of industry experience, we've built a reputation for excellence, reliability, and innovation across all our service divisions.</p>
+              <p>Our commitment to quality and client satisfaction has earned us recognition as a trusted partner in South Africa's business landscape. We pride ourselves on our ability to deliver integrated solutions that address complex challenges while maintaining the highest standards of professionalism and ethical conduct.</p>
+              <p><a class="btn" href="#contact">Get In Touch</a></p>
+            </div>
+          </div>
+
+          <div>
+            <div class="card placeholder large">
+              Corporate Image Placeholder<br>Replace with assets/images/overview.webp
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="content" aria-labelledby="servicesTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="servicesTitle">Our Core Services</h3>
+          <p class="muted">Comprehensive solutions tailored to your business needs.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card" aria-labelledby="s1">
+            <div class="icon" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
+            <h4 id="s1">Professional Services</h4>
+            <p>Strategic consulting, financial advisory, and business development services to help organizations achieve sustainable growth and operational excellence. Our experienced consultants provide insights and strategies to optimize business performance.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s2">
+            <div class="icon" aria-hidden="true"><i class="fas fa-network-wired"></i></div>
+            <h4 id="s2">Information & Communication</h4>
+            <p>IT infrastructure, cybersecurity, digital transformation, and communication solutions to keep your business competitive in the digital age. We implement cutting-edge technologies to enhance productivity and security.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s3">
+            <div class="icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></div>
+            <h4 id="s3">Administrative Support</h4>
+            <p>Comprehensive administrative, HR, and operational support services designed to streamline processes and enhance organizational efficiency. Our solutions help businesses focus on their core competencies.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s4">
+            <div class="icon" aria-hidden="true"><i class="fas fa-shipping-fast"></i></div>
+            <h4 id="s4">Logistics & Supply Chain</h4>
+            <p>End-to-end logistics, warehousing, distribution, and supply chain management solutions to optimize operations and reduce costs. We ensure timely delivery and efficient resource management.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s5">
+            <div class="icon" aria-hidden="true"><i class="fas fa-solar-panel"></i></div>
+            <h4 id="s5">Energy Solutions</h4>
+            <p>Renewable energy, solar installations, and power infrastructure supply. We help businesses transition to sustainable energy sources while maintaining operational efficiency and cost-effectiveness.</p>
+          </article>
+
+          <article class="service-card" aria-labelledby="s6">
+            <div class="icon" aria-hidden="true"><i class="fas fa-users"></i></div>
+            <h4 id="s6">Consulting & Operations</h4>
+            <p>Operational consulting, project management and optimization across business divisions. Our experts provide guidance to improve processes, increase productivity, and drive growth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="content" aria-labelledby="projectsTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="projectsTitle">Featured Projects</h3>
+          <p class="muted">Showcasing our successful implementations and partnerships</p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image placeholder">
+              Project Image 1<br>Replace with assets/images/project1.jpg
+            </div>
+            <div class="project-content">
+              <h4>Johannesburg Infrastructure Upgrade</h4>
+              <p>A comprehensive urban infrastructure project that modernized key transportation and utility systems across the city.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image placeholder">
+              Project Image 2<br>Replace with assets/images/project2.jpg
+            </div>
+            <div class="project-content">
+              <h4>Renewable Energy Initiative</h4>
+              <p>Implementation of solar power solutions for commercial and industrial clients, reducing carbon footprint and energy costs.</p>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="project-image placeholder">
+              Project Image 3<br>Replace with assets/images/project3.jpg
+            </div>
+            <div class="project-content">
+              <h4>Supply Chain Optimization</h4>
+              <p>Redesigned logistics and distribution networks for major retailers, improving efficiency and reducing operational costs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="content" aria-labelledby="timelineTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="timelineTitle">Our Journey</h3>
+          <p class="muted">Key milestones in our growth and development</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>2009 - Foundation</h4>
+              <p>Chauke Group Holdings was established with a vision to create a diversified holding company serving multiple industries.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>2012 - Expansion</h4>
+              <p>Expanded our service portfolio to include logistics and supply chain management, establishing key partnerships.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>2015 - Growth</h4>
+              <p>Reached 50 employees and secured major contracts in the infrastructure and energy sectors.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>2018 - Diversification</h4>
+              <p>Entered the renewable energy market and established our information technology division.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>2021 - Strategic Partnership</h4>
+              <p>Acquired significant stake in Plethore Plastic Engineers, expanding our manufacturing capabilities.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <h4>2024 - Vision 2030</h4>
+              <p>Launched our strategic roadmap for sustainable growth and international expansion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARTNERSHIP -->
+    <section id="partnership" class="partnership" aria-labelledby="partTitle">
+      <div class="placeholder hero">
+        Partnership Image Placeholder<br>Replace with assets/images/partnership.webp
+      </div>
+      <div class="container inner">
+        <div>
+          <h3 id="partTitle" style="color:var(--gold);margin-top:0">Strategic Partnership</h3>
+          <p style="opacity:.95">Chauke Group Holdings holds a significant stake in Plethore Plastic Engineers — a forward-thinking plastic manufacturing company. This partnership strengthens our footprint in the manufacturing sector, enabling industrial development, innovation, and local economic empowerment.</p>
+          <p style="opacity:.95">Plethore specializes in custom plastic injection molding, product design and sustainable manufacturing solutions for various industries including automotive, packaging and consumer goods.</p>
+          <p style="opacity:.95">Through this strategic alliance, we leverage synergies to deliver comprehensive solutions to our clients while promoting sustainable manufacturing practices and local content development.</p>
+          <p><a class="btn" href="#contact">Learn More</a></p>
+        </div>
+
+        <div>
+          <div class="placeholder medium">
+            Partnership Detail Image<br>Replace with assets/images/partnership-detail.jpg
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section id="vision-mission" class="content" aria-labelledby="vmTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="vmTitle">Our Vision & Mission</h3>
+          <p class="muted">Guiding principles that drive our success</p>
+        </div>
+
+        <div class="vm-grid">
+          <div class="vm-card">
+            <h4>Our Vision</h4>
+            <p>To be a leading multidisciplinary holding company recognized for excellence, innovation, and sustainable growth, creating lasting value for our stakeholders, partners, and communities. We aspire to be the preferred partner for businesses seeking integrated solutions across Africa and beyond.</p>
+          </div>
+
+          <div class="vm-card">
+            <h4>Our Mission</h4>
+            <p>To deliver world-class services and create sustainable value through diversified operations, strategic investments, and innovative solutions that address evolving market needs and contribute to economic development. We are committed to ethical business practices, environmental stewardship, and social responsibility.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section id="values" class="content" aria-labelledby="valTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="valTitle">Our Values</h3>
+          <p class="muted">Principles that guide our business decisions and relationships</p>
+        </div>
+
+        <div class="values-grid">
+          <div class="card">
+            <h4 style="color:var(--gold)">Innovation</h4>
+            <p class="muted">We embrace new ideas and technologies to stay ahead, continuously improving our services and solutions. We foster a culture of creativity and forward thinking.</p>
+          </div>
+
+          <div class="card">
+            <h4 style="color:var(--gold)">Integrity</h4>
+            <p class="muted">We conduct our business with honesty, transparency, and ethical practices, building trust with clients and partners. Our reputation is our most valuable asset.</p>
+          </div>
+
+          <div class="card">
+            <h4 style="color:var(--gold)">Collaboration</h4>
+            <p class="muted">We believe in the power of partnerships and teamwork to achieve exceptional results. We work closely with clients, stakeholders, and communities to create shared value.</p>
+          </div>
+
+          <div class="card">
+            <h4 style="color:var(--gold)">Excellence</h4>
+            <p class="muted">We strive for the highest standards in everything we do, delivering quality and value to stakeholders. We continuously measure and improve our performance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (Replaced Form with Contact Cards) -->
+    <section id="contact" class="content" aria-labelledby="contactTitle">
+      <div class="container">
+        <div class="section-title">
+          <h3 id="contactTitle">Contact Us</h3>
+          <p class="muted">Get in touch to discuss how we can help your business thrive</p>
+        </div>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <h4>Our Office</h4>
+            <p>123 Business District<br>Johannesburg, South Africa<br>2000</p>
+            <a href="https://maps.google.com/?q=123+Business+District+Johannesburg" target="_blank">View on Map</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h4>Phone & Email</h4>
+            <p>+27 11 123 4567<br>+27 11 123 4568<br>info@chaukegroup.co.za</p>
+            <a href="tel:+27111234567">Call Now</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+            <a href="#contact">Schedule a Meeting</a>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="#" aria-label="LinkedIn" title="Connect on LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="Twitter" title="Follow on Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="Facebook" title="Like on Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Instagram" title="Follow on Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="content" aria-label="Call to action">
+      <div class="container">
+        <div class="cta-section card">
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;">
+            <div style="flex:1; min-width:300px;">
+              <h3 style="margin:0;color:var(--gold);font-size:32px;">Ready to Partner with Excellence?</h3>
+              <p class="muted" style="margin:15px 0 0;font-size:18px;">Discover how Chauke Group Holdings can help your business thrive through diversified services and strategic approaches.</p>
+            </div>
+            <div>
+              <a class="btn" href="#contact" style="min-width:200px;">
+                <span>Contact Us Today</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER - Original Design -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="logo.png" alt="Chauke Group Holdings logo" style="height:70px;margin-bottom:16px">
+          <p class="small">Driving sustainable development and economic growth across South Africa and beyond through diversified operations and strategic partnerships.</p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--gold)">Quick Links</h4>
+          <p><a href="#services">Our Services</a></p>
+          <p><a href="#overview">Overview</a></p>
+          <p><a href="#projects">Projects</a></p>
+          <p><a href="#timeline">History</a></p>
+          <p><a href="#vision-mission">Vision & Mission</a></p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--gold)">Contact</h4>
+          <p class="small">📍 123 Business District, Johannesburg, South Africa</p>
+          <p class="small">📧 info@chaukegroup.co.za</p>
+          <p class="small">📞 +27 11 123 4567</p>
+          <p class="small">🕒 Mon-Fri: 8:00 AM - 5:00 PM</p>
+        </div>
+
+        <div>
+          <h4 style="color:var(--gold)">Follow</h4>
+          <p><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+          <p><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></p>
+          <p><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></p>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:40px;color:var(--muted);font-size:14px">
+        © <span id="year"></span> Chauke Group Holdings. All Rights Reserved. | <a href="#" style="color:var(--muted)">Privacy Policy</a> | <a href="#" style="color:var(--muted)">Terms of Service</a>
+      </div>
+      
+      <!-- Design Credit -->
+      <div class="design-credit">
+        Website designed by <a href="https://ayocreativedesigns.com" target="_blank" rel="noopener">Ayo Creative Designs Agency</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Enhanced JS -->
+  <script>
+    (function() {
+      // Loading screen
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          document.getElementById('loading').classList.add('hide');
+        }, 1200);
+      });
+
+      // Year
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Theme: auto-detect & toggle, persist in localStorage
+      const root = document.documentElement;
+      const themeBtn = document.getElementById('themeToggle');
+      const stored = localStorage.getItem('cgh_theme');
+
+      function applyTheme(theme){
+        if(theme === 'dark'){
+          root.classList.add('dark');
+          if(themeBtn) {
+            themeBtn.setAttribute('aria-pressed','true');
+            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
+          }
+        } else {
+          root.classList.remove('dark');
+          if(themeBtn) {
+            themeBtn.setAttribute('aria-pressed','false');
+            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+          }
+        }
+      }
+
+      // initial
+      if(stored){
+        applyTheme(stored);
+      } else {
+        // if prefers-color-scheme dark (handled by CSS) but ensure button state sync
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+      }
+
+      if(themeBtn) {
+        themeBtn.addEventListener('click', function() {
+          const isDark = root.classList.toggle('dark');
+          localStorage.setItem('cgh_theme', isDark ? 'dark' : 'light');
+          applyTheme(isDark ? 'dark' : 'light');
+        });
+      }
+
+      // Enhanced Sticky Header with scroll effect
+      const header = document.getElementById('mainHeader');
+      let lastScroll = 0;
+      
+      window.addEventListener('scroll', function() {
+        const currentScroll = window.pageYOffset;
+        
+        // Add scrolled class for background change
+        if (currentScroll > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        
+        // Hide/show header on scroll
+        if (currentScroll > lastScroll && currentScroll > 100) {
+          // Scrolling down
+          header.style.transform = 'translateY(-100%)';
+        } else {
+          // Scrolling up
+          header.style.transform = 'translateY(0)';
+        }
+        
+        lastScroll = currentScroll;
+      });
+
+      // Mobile menu
+      const mobileToggle = document.getElementById('mobileToggle');
+      const nav = document.getElementById('mainNav');
+      if(mobileToggle) {
+        mobileToggle.addEventListener('click', function(){
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', String(!expanded));
+          if(nav.style.display === 'flex'){ 
+            nav.style.display = ''; 
+          } else { 
+            nav.style.display = 'flex'; 
+            nav.style.flexDirection = 'column'; 
+            nav.style.gap = '15px'; 
+            nav.style.background = 'var(--card)'; 
+            nav.style.padding = '25px'; 
+            nav.style.position = 'fixed'; 
+            nav.style.right = '20px'; 
+            nav.style.top = '90px'; 
+            nav.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)'; 
+            nav.style.borderRadius = '16px';
+            nav.style.border = '1px solid var(--border)';
+            nav.style.zIndex = '1000';
+            nav.style.minWidth = '250px';
+          }
+        });
+      }
+
+      // Smooth scroll for internal links with offset for sticky header
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e){
+          const href = this.getAttribute('href');
+          if(href.length > 1){
+            e.preventDefault();
+            const el = document.querySelector(href);
+            if(el){
+              const offset = 100;
+              const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+              window.scrollTo({top, behavior: 'smooth'});
+              
+              // Close mobile menu if open
+              if(nav.style.display === 'flex'){
+                nav.style.display = '';
+                mobileToggle.setAttribute('aria-expanded', 'false');
+              }
+            }
+          }
+        });
+      });
+
+      // Scroll to top button
+      const scrollTopBtn = document.getElementById('scrollTop');
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 500) {
+          scrollTopBtn.classList.add('show');
+        } else {
+          scrollTopBtn.classList.remove('show');
+        }
+      });
+      
+      scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      });
+
+      // Stat counters (animate when scrolled into view)
+      const counters = document.querySelectorAll('.count');
+      const animateCount = (el, target) => {
+        let current = 0;
+        const duration = 1800;
+        const step = Math.max(1, Math.floor(target / (duration / 16)));
+        const id = setInterval(() => {
+          current += step;
+          if(current >= target){ 
+            current = target; 
+            clearInterval(id); 
+          }
+          el.textContent = current;
+        }, 16);
+      };
+
+      const obs = new IntersectionObserver((entries, o) => {
+        entries.forEach(en => {
+          if(en.isIntersecting){
+            const el = en.target;
+            const target = parseInt(el.getAttribute('data-target'),10) || 0;
+            animateCount(el, target);
+            o.unobserve(el);
+          }
+        });
+      }, {threshold:0.3});
+
+      counters.forEach(c => obs.observe(c));
+
+      // Accessibility: close mobile nav on resize
+      window.addEventListener('resize', () => {
+        if(window.innerWidth > 880){
+          nav.style.display = '';
+          if(mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Add hover effects to cards
+      document.querySelectorAll('.card, .service-card, .project-card, .contact-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.zIndex = '10';
+        });
+        card.addEventListener('mouseleave', function() {
+          this.style.zIndex = '';
+        });
+      });
+
+      // Add animation on scroll for elements
+      const animatedElements = document.querySelectorAll('.service-card, .project-card, .contact-card, .stat, .vm-card');
+      const fadeObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.8s ease-out';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      animatedElements.forEach(el => fadeObserver.observe(el));
+
+      // Simple email copy functionality for contact
+      document.querySelectorAll('.contact-card a[href^="mailto"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const email = 'info@chaukegroup.co.za';
+          navigator.clipboard.writeText(email).then(() => {
+            const originalText = this.textContent;
+            this.textContent = 'Email Copied!';
+            setTimeout(() => {
+              this.textContent = originalText;
+            }, 2000);
+          }).catch(err => {
+            console.log('Failed to copy email: ', err);
+          });
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
