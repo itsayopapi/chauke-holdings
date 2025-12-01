@@ -57,32 +57,17 @@
       --gold-dark: #A3782F;
       --gold-darker: #8A6325;
 
-      --text: #0D0D0D;
-      --bg: #FFFFFF;
-      --card: #FAFAFA;
-      --muted: #6F6F6F;
-      --border: #E8E8E8;
-      --shadow: rgba(0, 0, 0, 0.08);
-
-      --radius: 12px;
-      --transition: 0.35s ease;
-      --transition-slow: 0.5s ease;
-    }
-
-    /* Dark theme override */
-    :root.dark {
+      /* PERMANENT BLACK & GOLD THEME - Forced regardless of device preference */
       --text: #FFFFFF;
       --bg: #121212;
       --card: #1E1E1E;
       --muted: #BDBDBD;
       --border: #333333;
       --shadow: rgba(255, 255, 255, 0.05);
-    }
 
-    /* Auto apply system preference (initial) */
-    @media (prefers-color-scheme: dark){
-      :root{ color-scheme: dark; }
-      html:not(.no-auto-theme) { --text: #FFFFFF; --bg:#121212; --card:#1E1E1E; --muted:#BDBDBD; --border:#333; --shadow: rgba(255, 255, 255, 0.05); }
+      --radius: 12px;
+      --transition: 0.35s ease;
+      --transition-slow: 0.5s ease;
     }
 
     /* Reset */
@@ -123,13 +108,6 @@
     header[role="banner"].scrolled {
       background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(18,18,18,0.97));
       box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    }
-    :root:not(.dark) header[role="banner"]{
-      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
-    }
-    :root:not(.dark) header[role="banner"].scrolled {
-      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.97));
-      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
     }
 
     .nav{
@@ -1029,7 +1007,6 @@
       </nav>
 
       <div class="nav-actions">
-        <!-- Theme toggle commented out as per original code -->
         <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav" title="Open menu">
           <i class="fas fa-bars" aria-hidden="true"></i>
           <span class="sr-only">Open Menu</span>
@@ -1456,44 +1433,6 @@
 
       // Year
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      // Theme: auto-detect & toggle, persist in localStorage
-      const root = document.documentElement;
-      const themeBtn = document.getElementById('themeToggle');
-      const stored = localStorage.getItem('cgh_theme');
-
-      function applyTheme(theme){
-        if(theme === 'dark'){
-          root.classList.add('dark');
-          if(themeBtn) {
-            themeBtn.setAttribute('aria-pressed','true');
-            themeBtn.innerHTML = '<i class="fas fa-sun"></i>';
-          }
-        } else {
-          root.classList.remove('dark');
-          if(themeBtn) {
-            themeBtn.setAttribute('aria-pressed','false');
-            themeBtn.innerHTML = '<i class="fas fa-moon"></i>';
-          }
-        }
-      }
-
-      // initial
-      if(stored){
-        applyTheme(stored);
-      } else {
-        // if prefers-color-scheme dark (handled by CSS) but ensure button state sync
-        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-        applyTheme(prefersDark ? 'dark' : 'light');
-      }
-
-      if(themeBtn) {
-        themeBtn.addEventListener('click', function() {
-          const isDark = root.classList.toggle('dark');
-          localStorage.setItem('cgh_theme', isDark ? 'dark' : 'light');
-          applyTheme(isDark ? 'dark' : 'light');
-        });
-      }
 
       // Enhanced Sticky Header with scroll effect
       const header = document.getElementById('mainHeader');
