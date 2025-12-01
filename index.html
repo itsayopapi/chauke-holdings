@@ -423,7 +423,7 @@
     /* Partnership (dark) */
     .partnership{
       padding:100px 0;
-      background:linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url("assets/images/partnership.webp") center/cover no-repeat;
+      background:linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url("") center/cover no-repeat;
       color:#fff;
       border-radius:0;
       margin-top:40px;
@@ -935,6 +935,288 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
+
+    /* CLIENTS SHOWCASE - CESIS STYLE */
+.clients-showcase {
+  margin: 60px 0 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.clients-row {
+  margin-bottom: 25px;
+  overflow: hidden;
+  position: relative;
+}
+
+.clients-row:last-child {
+  margin-bottom: 0;
+}
+
+.clients-track {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+/* First row - Scroll left */
+.clients-row-1 .clients-track {
+  animation: scrollLeft 40s linear infinite;
+  animation-play-state: running;
+}
+
+/* Second row - Scroll right */
+.clients-row-2 .clients-track {
+  animation: scrollRight 35s linear infinite;
+  animation-play-state: running;
+}
+
+/* Third row - Scroll left (optional, slightly slower) */
+.clients-row-3 .clients-track {
+  animation: scrollLeft 45s linear infinite;
+  animation-play-state: running;
+}
+
+.client-item {
+  flex-shrink: 0;
+  padding: 25px 40px;
+  background: var(--card);
+  border: 2px solid rgba(200,154,66,0.2);
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  color: var(--gold);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  height: 90px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Add subtle gradient overlay on hover */
+.client-item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(200,154,66,0.05), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.client-item:hover:before {
+  opacity: 1;
+}
+
+/* Add gold accent on hover */
+.client-item:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 25px rgba(200,154,66,0.15);
+}
+
+/* Add subtle pulse animation on hover */
+@keyframes pulse {
+  0% { box-shadow: 0 8px 20px rgba(200,154,66,0.1); }
+  50% { box-shadow: 0 8px 20px rgba(200,154,66,0.25); }
+  100% { box-shadow: 0 8px 20px rgba(200,154,66,0.1); }
+}
+
+.client-item:hover {
+  animation: pulse 2s infinite;
+}
+
+/* Carousel animations */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Gradient overlay for fading edges */
+.clients-row:before,
+.clients-row:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 150px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.clients-row:before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg) 20%, transparent 100%);
+}
+
+.clients-row:after {
+  right: 0;
+  background: linear-gradient(90deg, transparent 0%, var(--bg) 80%);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .client-item {
+    min-width: 250px;
+    height: 80px;
+    font-size: 18px;
+    padding: 20px 30px;
+  }
+  
+  .clients-track {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 992px) {
+  .client-item {
+    min-width: 220px;
+    height: 75px;
+    font-size: 16px;
+    padding: 18px 25px;
+  }
+  
+  .clients-track {
+    gap: 20px;
+  }
+  
+  .clients-row-1 .clients-track {
+    animation: scrollLeft 35s linear infinite;
+  }
+  
+  .clients-row-2 .clients-track {
+    animation: scrollRight 30s linear infinite;
+  }
+  
+  .clients-row-3 .clients-track {
+    animation: scrollLeft 40s linear infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-item {
+    min-width: 200px;
+    height: 70px;
+    font-size: 15px;
+    padding: 15px 20px;
+  }
+  
+  .clients-track {
+    gap: 15px;
+  }
+  
+  .clients-showcase {
+    margin: 40px 0 30px;
+  }
+  
+  .clients-row {
+    margin-bottom: 20px;
+  }
+  
+  .clients-row:before,
+  .clients-row:after {
+    width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-item {
+    min-width: 180px;
+    height: 65px;
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+  
+  .clients-track {
+    gap: 12px;
+  }
+  
+  .clients-row-1 .clients-track {
+    animation: scrollLeft 30s linear infinite;
+  }
+  
+  .clients-row-2 .clients-track {
+    animation: scrollRight 25s linear infinite;
+  }
+  
+  .clients-row-3 .clients-track {
+    animation: scrollLeft 35s linear infinite;
+  }
+  
+  .clients-row:before,
+  .clients-row:after {
+    width: 50px;
+  }
+}
+
+/* For very small screens, reduce to 2 rows */
+@media (max-width: 480px) {
+  .clients-row-3 {
+    display: none;
+  }
+  
+  .client-item {
+    min-width: 170px;
+    height: 60px;
+    font-size: 13px;
+    padding: 10px 15px;
+  }
+  
+  .clients-track {
+    gap: 10px;
+  }
+}
+
+/* Optional: Add slight delays for staggered animation */
+.clients-row-2 .clients-track {
+  animation-delay: -10s;
+}
+
+.clients-row-3 .clients-track {
+  animation-delay: -5s;
+}
+
+/* Ensure smooth animation performance */
+.clients-track {
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Pause animation on hover (optional) */
+.clients-row:hover .clients-track {
+  animation-play-state: paused;
+}
+
+/* Alternative: Slower animation on hover */
+.clients-row:hover .clients-track {
+  animation-duration: 80s;
+}
   </style>
 
   <!-- Enhanced JSON-LD Structured Data -->
@@ -1080,9 +1362,9 @@
           </div>
 
           <div>
-            <div class="card placeholder large">
+            <!--<div class="card placeholder large">
               Corporate Image Placeholder<br>Replace with assets/images/overview.webp
-            </div>
+            </div>-->
           </div>
         </div>
       </div>
@@ -1136,46 +1418,90 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="content" aria-labelledby="projectsTitle">
-      <div class="container">
-        <div class="section-title">
-          <h3 id="projectsTitle">Featured Projects</h3>
-          <p class="muted">Showcasing our successful implementations and partnerships</p>
-        </div>
+    <!-- CLIENTS CAROUSEL -->
+<section id="clients" class="content" aria-labelledby="clientsTitle">
+  <div class="container">
+    <div class="section-title">
+      <h3 id="clientsTitle">Our Valued Clients</h3>
+      <p class="muted">Trusted by industry leaders and public institutions across South Africa</p>
+    </div>
 
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image placeholder">
-              Project Image 1<br>Replace with assets/images/project1.jpg
-            </div>
-            <div class="project-content">
-              <h4>Johannesburg Infrastructure Upgrade</h4>
-              <p>A comprehensive urban infrastructure project that modernized key transportation and utility systems across the city.</p>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image placeholder">
-              Project Image 2<br>Replace with assets/images/project2.jpg
-            </div>
-            <div class="project-content">
-              <h4>Renewable Energy Initiative</h4>
-              <p>Implementation of solar power solutions for commercial and industrial clients, reducing carbon footprint and energy costs.</p>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image placeholder">
-              Project Image 3<br>Replace with assets/images/project3.jpg
-            </div>
-            <div class="project-content">
-              <h4>Supply Chain Optimization</h4>
-              <p>Redesigned logistics and distribution networks for major retailers, improving efficiency and reducing operational costs.</p>
-            </div>
-          </div>
+    <div class="clients-showcase">
+      <!-- First Row - Scrolls Left -->
+      <div class="clients-row clients-row-1">
+        <div class="clients-track">
+          <!-- First set -->
+          <div class="client-item">CSIR</div>
+          <div class="client-item">DEPARTMENT OF CORRECTIONAL SERVICES</div>
+          <div class="client-item">GEOROSA AFRICA</div>
+          <div class="client-item">ESKOM</div>
+          <div class="client-item">DEPARTMENT OF DEFENCE</div>
+          <div class="client-item">SAPS</div>
+          <div class="client-item">GLENCORE</div>
+          <div class="client-item">AGREMENT SA</div>
+          
+          <!-- Duplicate set for seamless loop -->
+          <div class="client-item">CSIR</div>
+          <div class="client-item">DEPARTMENT OF CORRECTIONAL SERVICES</div>
+          <div class="client-item">GEOROSA AFRICA</div>
+          <div class="client-item">ESKOM</div>
+          <div class="client-item">DEPARTMENT OF DEFENCE</div>
+          <div class="client-item">SAPS</div>
+          <div class="client-item">GLENCORE</div>
+          <div class="client-item">AGREMENT SA</div>
         </div>
       </div>
-    </section>
 
+      <!-- Second Row - Scrolls Right -->
+      <div class="clients-row clients-row-2">
+        <div class="clients-track">
+          <!-- First set -->
+          <div class="client-item">ACSA</div>
+          <div class="client-item">AIRFORCE</div>
+          <div class="client-item">TRANSNET</div>
+          <div class="client-item">GAUTENG HEALTH</div>
+          <div class="client-item">IEC</div>
+          <div class="client-item">SACE</div>
+          <div class="client-item">VODACOM</div>
+          
+          <!-- Duplicate set for seamless loop -->
+          <div class="client-item">ACSA</div>
+          <div class="client-item">AIRFORCE</div>
+          <div class="client-item">TRANSNET</div>
+          <div class="client-item">GAUTENG HEALTH</div>
+          <div class="client-item">IEC</div>
+          <div class="client-item">SACE</div>
+          <div class="client-item">VODACOM</div>
+        </div>
+      </div>
+
+      <!-- Optional: Third Row - Scrolls Left (if you want more rows) -->
+      <div class="clients-row clients-row-3">
+        <div class="clients-track">
+          <!-- Mix of clients -->
+          <div class="client-item">CSIR</div>
+          <div class="client-item">ESKOM</div>
+          <div class="client-item">TRANSNET</div>
+          <div class="client-item">VODACOM</div>
+          <div class="client-item">SAPS</div>
+          <div class="client-item">ACSA</div>
+          <div class="client-item">GLENCORE</div>
+          
+          <!-- Duplicate set -->
+          <div class="client-item">CSIR</div>
+          <div class="client-item">ESKOM</div>
+          <div class="client-item">TRANSNET</div>
+          <div class="client-item">VODACOM</div>
+          <div class="client-item">SAPS</div>
+          <div class="client-item">ACSA</div>
+          <div class="client-item">GLENCORE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
     <!-- TIMELINE -->
     <section id="timeline" class="content" aria-labelledby="timelineTitle">
       <div class="container">
@@ -1228,7 +1554,7 @@
     <!-- PARTNERSHIP -->
     <section id="partnership" class="partnership" aria-labelledby="partTitle">
       <div class="placeholder hero">
-        Partnership Image Placeholder<br>Replace with assets/images/partnership.webp
+        
       </div>
       <div class="container inner">
         <div>
@@ -1241,7 +1567,7 @@
 
         <div>
           <div class="placeholder medium">
-            Partnership Detail Image<br>Replace with assets/images/partnership-detail.jpg
+           
           </div>
         </div>
       </div>
@@ -1315,11 +1641,11 @@
               <i class="fas fa-map-marker-alt"></i>
             </div>
             <h4>Our Office</h4>
-            <p>123 Business District<br>Johannesburg, South Africa<br>2000</p>
+            <p>322 Erasmus Avenue<br>Unit 178, Celtisdal,<br>Centurion,South Africa</p>
             <a href="https://maps.google.com/?q=123+Business+District+Johannesburg" target="_blank">View on Map</a>
           </div>
 
-          <div class="contact-card">
+          <!--<div class="contact-card">
             <div class="icon">
               <i class="fas fa-phone"></i>
             </div>
@@ -1351,7 +1677,7 @@
           <a href="#" aria-label="Instagram" title="Follow on Instagram">
             <i class="fab fa-instagram"></i>
           </a>
-        </div>
+        </div>-->
       </div>
     </section>
 
@@ -1396,10 +1722,10 @@
 
         <div>
           <h4 style="color:var(--gold)">Contact</h4>
-          <p class="small">📍 123 Business District, Johannesburg, South Africa</p>
-          <p class="small">📧 info@chaukegroup.co.za</p>
-          <p class="small">📞 +27 11 123 4567</p>
-          <p class="small">🕒 Mon-Fri: 8:00 AM - 5:00 PM</p>
+          <p class="small">📍 322 Erasmus Avenue, Unit 178, Celtisdal, Centurion,South Africa</p>
+          <!--<p class="small">📧 info@chaukegroup.co.za</p>-->
+          <!--<p class="small">📞 +27 11 123 4567</p>-->
+          <!--<p class="small">🕒 Mon-Fri: 8:00 AM - 5:00 PM</p>-->
         </div>
 
         <div>
@@ -1599,6 +1925,67 @@
       });
 
     })();
+
+
+    // Clients Carousel Enhancement
+(function() {
+  // Duplicate client items for better seamless looping
+  const clientRows = document.querySelectorAll('.clients-row');
+  
+  clientRows.forEach((row, index) => {
+    const track = row.querySelector('.clients-track');
+    const items = track.querySelectorAll('.client-item');
+    
+    // Clone items and append to track for smoother loop
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      track.appendChild(clone);
+    });
+    
+    // Add unique class to each row for different animation speeds
+    row.classList.add(`row-${index + 1}`);
+  });
+  
+  // Optional: Add interaction - pause on hover, resume on mouse leave
+  clientRows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+      const track = row.querySelector('.clients-track');
+      track.style.animationPlayState = 'paused';
+    });
+    
+    row.addEventListener('mouseleave', () => {
+      const track = row.querySelector('.clients-track');
+      track.style.animationPlayState = 'running';
+    });
+  });
+  
+  // Adjust animation speed based on viewport width
+  function adjustAnimationSpeeds() {
+    const width = window.innerWidth;
+    
+    clientRows.forEach((row, index) => {
+      const track = row.querySelector('.clients-track');
+      
+      if (width < 576) {
+        // Mobile
+        track.style.animationDuration = `${25 + (index * 5)}s`;
+      } else if (width < 768) {
+        // Tablet
+        track.style.animationDuration = `${30 + (index * 5)}s`;
+      } else if (width < 992) {
+        // Small desktop
+        track.style.animationDuration = `${35 + (index * 5)}s`;
+      } else {
+        // Desktop
+        track.style.animationDuration = `${40 + (index * 5)}s`;
+      }
+    });
+  }
+  
+  // Run on load and resize
+  window.addEventListener('load', adjustAnimationSpeeds);
+  window.addEventListener('resize', adjustAnimationSpeeds);
+})();
   </script>
 </body>
 </html>
