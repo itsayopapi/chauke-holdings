@@ -1263,7 +1263,7 @@
       <div class="container">
         <div class="stats-grid">
           <div class="stat">
-            <h3 class="count" data-target="9">9</h3>
+            <h3 class="count" id="yearsOfExcellence" data-target="10">10</h3>
             <p>Years of Excellence</p>
           </div>
           <div class="stat">
@@ -1294,7 +1294,7 @@
           <div class="text">
             <div class="card">
               <p>Chauke Group Holdings is a dynamic, multidisciplinary company committed to delivering a broad spectrum of professional services across various sectors. Our business model is built on flexibility, innovation, and strategic partnerships, allowing us to adapt to diverse client needs and market demands.</p>
-              <p>We continuously evolve and expand into new industries where we can add value and drive growth, positioning ourselves as a versatile partner for businesses seeking comprehensive solutions. With over 8 years of industry experience, we've built a reputation for excellence, reliability, and innovation across all our service divisions.</p>
+              <p>We continuously evolve and expand into new industries where we can add value and drive growth, positioning ourselves as a versatile partner for businesses seeking comprehensive solutions. With over <span id="yearsExperienceText">10</span> years of industry experience, we've built a reputation for excellence, reliability, and innovation across all our service divisions.</p>
               <p>Our commitment to quality and client satisfaction has earned us recognition as a trusted partner in South Africa's business landscape. We pride ourselves on our ability to deliver integrated solutions that address complex challenges while maintaining the highest standards of professionalism and ethical conduct.</p>
               <p><a class="btn" href="#contact">Get In Touch</a></p>
             </div>
@@ -1682,8 +1682,6 @@
           <p class="small">📍 322 Erasmus Avenue, Unit 178, Celtisdal, Centurion, South Africa</p>
           <p class="small">📧 info@cgholdings.co.za</p>
           <p class="small">🕒 Mon-Fri: 8:00 AM - 5:00 PM</p>
-          <p>Call us: &#9742; 012 004 8016</p>
-
         </div>
 
         <div>
@@ -1700,7 +1698,7 @@
       
       <!-- Design Credit -->
       <div class="design-credit">
-        Website designed by <a href="https://ayocreativedesigns.com" target="_blank" rel="noopener">Ayo Creative Designs</a>
+        Website designed by <a href="https://ayocreativedesigns.com" target="_blank" rel="noopener">Ayo Creative Designs Agency</a>
       </div>
     </div>
   </footer>
@@ -1717,6 +1715,29 @@
 
       // Year
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Calculate years dynamically from founding year (2016)
+      function updateYearsOfExcellence() {
+        const foundingYear = 2016;
+        const currentYear = new Date().getFullYear();
+        const yearsInBusiness = currentYear - foundingYear;
+        
+        // Update the stat counter
+        const yearsStatEl = document.getElementById('yearsOfExcellence');
+        if (yearsStatEl) {
+          yearsStatEl.setAttribute('data-target', yearsInBusiness);
+          yearsStatEl.textContent = yearsInBusiness;
+        }
+        
+        // Update the text experience
+        const yearsTextEl = document.getElementById('yearsExperienceText');
+        if (yearsTextEl) {
+          yearsTextEl.textContent = yearsInBusiness;
+        }
+      }
+      
+      // Call on page load
+      updateYearsOfExcellence();
 
       // Enhanced Sticky Header with scroll effect
       const header = document.getElementById('mainHeader');
