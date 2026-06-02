@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Enhanced SEO Meta Tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="author" content="Chauke Group Holdings" />
   <meta name="language" content="English" />
-  
-  <!-- Primary Meta Tags -->
+
   <title>Chauke Group Holdings — Driving Excellence Through Diversification</title>
-  <meta name="description" content="Chauke Group Holdings (CGH) — A diversified South African holding company delivering infrastructure, engineering, logistics, security, energy and business services. Learn about our services, partnerships and contact details." />
+  <meta name="description" content="Chauke Group Holdings (CGH) — A diversified South African holding company delivering infrastructure, engineering, logistics, security, energy and business services." />
   <meta name="keywords" content="Chauke Group Holdings, Chauke, investment company, infrastructure, logistics, security, energy, South Africa, business services, engineering, professional services" />
   <link rel="canonical" href="https://cgholdings.co.za/" />
 
-  <!-- Open Graph / Social -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Chauke Group Holdings — Driving Excellence Through Diversification" />
   <meta property="og:description" content="A diversified holding company delivering infrastructure, engineering, logistics, security, energy and business services." />
@@ -22,1143 +19,1222 @@
   <meta property="og:url" content="https://cgholdings.co.za/" />
   <meta property="og:site_name" content="Chauke Group Holdings" />
   <meta property="og:locale" content="en_ZA" />
-  
-  <!-- Twitter Card -->
+
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Chauke Group Holdings" />
   <meta name="twitter:description" content="Strategic investments and operational excellence across multiple sectors." />
   <meta name="twitter:image" content="https://cgholdings.co.za/logo.png" />
   <meta name="twitter:site" content="@ChaukeGroup" />
 
-  <!-- Google Fonts - More Professional Selection -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- FontAwesome (icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <!-- Enhanced Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
   <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
   <link rel="icon" type="image/png" sizes="16x16" href="logo.png">
-  <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#c89a42">
   <link rel="shortcut icon" href="favicon.ico">
-  <meta name="msapplication-TileColor" content="#c89a42">
-  <meta name="theme-color" content="#c89a42">
+  <meta name="theme-color" content="#0A0A0A">
 
-  <!-- --- Critical / Themed CSS --- -->
   <style>
-    /* === Brand colors extracted from logo === */
-    :root{
-      --gold: #C89A42;
-      --gold-2: #D8B56A;
-      --gold-light: #EAD4A5;
-      --gold-dark: #A3782F;
-      --gold-darker: #8A6325;
-
-      /* PERMANENT BLACK & GOLD THEME - Forced regardless of device preference */
-      --text: #FFFFFF;
-      --bg: #121212;
-      --card: #1E1E1E;
-      --muted: #BDBDBD;
-      --border: #333333;
-      --shadow: rgba(255, 255, 255, 0.05);
-
-      --radius: 12px;
-      --transition: 0.35s ease;
-      --transition-slow: 0.5s ease;
+    :root {
+      --gold-50:  #FFF9ED;
+      --gold-100: #F5E6C4;
+      --gold-200: #E8CF96;
+      --gold-300: #D8B56A;
+      --gold-400: #C89A42;
+      --gold-500: #B0852E;
+      --gold-600: #8A6325;
+      --gold-700: #6B4A1E;
+      --gold-800: #4D3418;
+      --void:      #050505;
+      --abyss:     #0A0A0A;
+      --depth:     #0F0F0F;
+      --surface:   #141414;
+      --elevated:  #1A1A1A;
+      --raised:    #222222;
+      --border:    #2A2A2A;
+      --border-subtle: rgba(255,255,255,0.06);
+      --text-primary:   #FFFFFF;
+      --text-secondary: #B0B0B0;
+      --text-tertiary:  #666666;
+      --text-muted:     #444444;
+      --glass-bg:       rgba(10, 10, 10, 0.72);
+      --glass-border:   rgba(200, 154, 66, 0.12);
+      --glass-border-strong: rgba(200, 154, 66, 0.25);
+      --glass-blur:     24px;
+      --space-xs:  0.5rem;
+      --space-sm:  1rem;
+      --space-md:  2rem;
+      --space-lg:  4rem;
+      --space-xl:  6rem;
+      --space-2xl: 10rem;
+      --space-3xl: 14rem;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+      --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+      --duration-fast: 0.2s;
+      --duration-normal: 0.4s;
+      --duration-slow: 0.8s;
+      --duration-slower: 1.2s;
     }
 
-    /* Reset */
-    *,*::before,*::after{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.6;
-      transition: background var(--transition), color var(--transition);
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    a{color:inherit; text-decoration: none;}
-    img{max-width:100%;height:auto;display:block}
-
-    /* Layout container */
-    .container{max-width:1200px;margin:0 auto;padding:0 20px}
-
-    /* Enhanced Sticky Header */
-    header[role="banner"]{
-      position:fixed;
-      top:0;
-      left:0;
-      width:100%;
-      z-index:1100;
-      backdrop-filter: blur(12px) saturate(180%);
-      background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(18,18,18,0.95));
-      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
-      transition: all var(--transition) cubic-bezier(0.4, 0, 0.2, 1);
-      transform: translateY(0);
-    }
-    header[role="banner"].scrolled {
-      background: linear-gradient(180deg, rgba(18,18,18,0.98), rgba(18,18,18,0.97));
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    }
-
-    .nav{
-      display:flex;align-items:center;justify-content:space-between;
-      gap:20px;padding:14px 0;
-    }
-    .brand{display:flex;align-items:center;gap:12px}
-    /* Increased logo size */
-    .brand img{height:70px;width:auto;display:block; transition: transform 0.3s ease;}
-    .brand:hover img { transform: scale(1.05); }
-    .brand h1{font-family:"Montserrat",serif;font-size:20px;margin:0;color:var(--gold);letter-spacing:1px;font-weight:700}
-
-    /* Nav links */
-    .nav-links{display:flex;gap:26px;align-items:center}
-    .nav-links a{
-      font-weight:600;
-      color:var(--text);
-      padding:8px 12px;
-      border-radius:8px;
-      transition:all .3s; 
-      position: relative;
-      font-family: "Montserrat", sans-serif;
-      font-size: 15px;
-      letter-spacing: 0.3px;
-    }
-    .nav-links a:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      width: 0;
-      height: 2px;
-      background: var(--gold);
-      transition: all 0.3s ease;
-      transform: translateX(-50%);
-    }
-    .nav-links a:hover{color:var(--gold);}
-    .nav-links a:hover:after { width: 80%; }
-    .nav-actions{display:flex;gap:12px;align-items:center}
-
-    /* Mobile */
-    .mobile-toggle{display:none;background:transparent;border:0;font-size:20px;color:var(--text);padding:8px;border-radius:8px; transition: all 0.3s;}
-    .mobile-toggle:hover { background: rgba(200, 154, 66, 0.1); }
-    @media (max-width:880px){
-      .nav-links{display:none}
-      .mobile-toggle{display:inline-block}
-    }
-
-    /* Hero - Centered Content */
-    .hero{
-      padding: 180px 0 120px;
-      position:relative;
-      color:white;
-      background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.75) 100%), url("") center/cover no-repeat;
-      overflow: hidden;
-      text-align: center;
-      margin-top: 0;
-    }
-    .hero:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, rgba(200,154,66,0.15) 0%, transparent 70%);
-      z-index: 1;
-    }
-    .hero .container {
-      position: relative;
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-      animation: fadeInUp 1s ease-out;
-    }
-    .hero h2{
-      font-family:"Montserrat",serif;
-      font-size: 56px;
-      margin: 0 0 24px;
-      line-height: 1.1;
-      letter-spacing: -0.5px;
-      text-shadow: 0 4px 15px rgba(0,0,0,0.4);
-      font-weight: 800;
-      animation: fadeInUp 0.8s ease-out 0.2s both;
-    }
-    .hero p{
-      max-width:720px;
-      color:rgba(255,255,255,0.92);
-      margin:0 auto 40px;
-      font-size: 20px;
-      line-height: 1.7;
-      animation: fadeInUp 0.8s ease-out 0.4s both;
-    }
-    .hero .cta{
-      display:flex;
-      gap:20px;
-      flex-wrap:wrap;
-      justify-content: center;
-      animation: fadeInUp 0.8s ease-out 0.6s both;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content: center;
-      gap: 10px;
-      padding:16px 32px;
-      border-radius:12px;
-      font-weight:600;
-      cursor:pointer;
-      border:0;
-      background:var(--gold);
-      color:#000;
-      text-decoration:none;
-      box-shadow:0 8px 25px rgba(200,154,66,0.25);
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      font-family: "Montserrat", sans-serif;
-      font-size: 16px;
-      min-width: 180px;
-    }
-    .btn:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 0;
-      height: 0;
-      background: rgba(255,255,255,0.2);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width 0.6s, height 0.6s;
-    }
-    .btn:hover:after {
-      width: 300px;
-      height: 300px;
-    }
-    .btn:hover {
-      transform:translateY(-5px);
-      box-shadow: 0 15px 30px rgba(200,154,66,0.35);
-    }
-    .btn.secondary{
-      background:transparent;
-      color:var(--gold);
-      border:2px solid rgba(200,154,66,0.4);
-      backdrop-filter: blur(8px);
-    }
-    .btn.secondary:hover{
-      background:rgba(200,154,66,0.15);
-      border-color: var(--gold);
-    }
-
-    /* Intro stats */
-    .stats{
-      background:var(--bg);
-      padding:80px 0;
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-      position: relative;
-    }
-    .stats:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(200,154,66,0.05), transparent);
-    }
-    .stats-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-      gap:30px;
-      align-items:center;
-      position: relative;
-      z-index: 1;
-    }
-    .stat{
-      padding:30px 20px;
-      text-align:center;
-      transition: transform 0.3s ease;
-      background: var(--card);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-    }
-    .stat:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 30px var(--shadow);
-    }
-    .stat h3{
-      font-size:48px;
-      margin:0;
-      color:var(--gold);
-      font-weight: 700;
-      font-family: "Montserrat", sans-serif;
-    }
-    .stat p{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-weight:600;
-      font-size: 16px;
-      letter-spacing: 0.5px;
-    }
-
-    /* Sections */
-    section.content{padding:100px 0}
-    .section-title{text-align:center;margin-bottom:60px}
-    .section-title h3{
-      color:var(--gold);
-      font-family:"Montserrat",serif;
-      font-size:42px;
-      margin:0 0 15px;
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
-    }
-    .section-title h3:after {
-      content: '';
-      position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80px;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-2));
-      border-radius: 4px;
-    }
-    .section-title p{color:var(--muted);margin-top:20px; font-size: 18px; max-width: 600px; margin-left: auto; margin-right: auto;}
-
-    /* Overview / About grid */
-    .overview-grid{
-      display:grid;
-      grid-template-columns:1fr 460px;
-      gap:50px;
-      align-items:center;
-    }
-    .overview-grid .text p{color:var(--muted);line-height:1.7; margin-bottom: 24px; font-size: 17px;}
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      padding:40px;
-      border-radius:20px;
-      box-shadow:0 10px 40px var(--shadow);
-      transition: all 0.4s ease;
-    }
-    .card:hover {
-      box-shadow: 0 20px 50px var(--shadow);
-      transform: translateY(-8px);
-    }
-
-    /* Services grid */
-    .services-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:40px;
-    }
-    .service-card{
-      padding:40px;
-      border-radius:20px;
-      background:linear-gradient(135deg,var(--card),rgba(0,0,0,0.02));
-      border:1px solid var(--border);
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-    }
-    .service-card:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-2));
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.5s ease;
-    }
-    .service-card:hover:before {
-      transform: scaleX(1);
-    }
-    .service-card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 25px 50px rgba(0,0,0,0.12);
-      border-color:var(--gold-light);
-    }
-    .service-card .icon{
-      font-size:48px;
-      color:var(--gold);
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
-    }
-    .service-card:hover .icon {
-      transform: scale(1.1) rotate(5deg);
-    }
-    .service-card h4{
-      margin:15px 0 20px;
-      color:var(--gold-2);
-      font-size: 22px;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-    }
-    .service-card p{color:var(--muted);margin:0; line-height: 1.7; font-size: 16px;}
-
-    /* Partnership (dark) */
-    .partnership{
-      padding:100px 0;
-      background:linear-gradient(135deg, rgba(0,0,0,0.9), rgba(0,0,0,0.8)), url("") center/cover no-repeat;
-      color:#fff;
-      border-radius:0;
-      margin-top:40px;
-      position: relative;
-      overflow: hidden;
-    }
-    .partnership:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(45deg, rgba(200,154,66,0.15) 0%, transparent 70%);
-    }
-    .partnership .inner{
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:50px;
-      align-items:center;
-      position: relative;
-      z-index: 1;
-    }
-
-    /* Vision / Mission */
-    .vm-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-      gap:40px;
-    }
-    .vm-card{
-      padding:40px;
-      background:var(--card);
-      border-radius:20px;
-      border:1px solid var(--border);
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-      height: 100%;
-    }
-    .vm-card:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(200,154,66,0.05), transparent);
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-    .vm-card:hover:before {
-      opacity: 1;
-    }
-    .vm-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px var(--shadow);
-    }
-    .vm-card h4{
-      margin:15px 0 20px;
-      color:var(--gold);
-      font-size: 26px;
-      font-family: "Montserrat", sans-serif;
-      font-weight: 600;
-    }
-    .vm-card p {
-      line-height: 1.7;
-      font-size: 17px;
-    }
-
-    /* Values */
-    .values-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:30px;
-    }
-
-    /* Contact Info Cards (Replacing Form) */
-    .contact-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-top: 50px;
-    }
-    .contact-card {
-      padding: 40px 30px;
-      background: var(--card);
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      text-align: center;
-      transition: all 0.4s ease;
-    }
-    .contact-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 40px var(--shadow);
-      border-color: var(--gold);
-    }
-    .contact-card .icon {
-      font-size: 48px;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-    .contact-card h4 {
-      color: var(--gold);
-      margin: 15px 0 10px;
-      font-family: "Montserrat", sans-serif;
-      font-size: 22px;
-    }
-    .contact-card p {
-      color: var(--muted);
-      margin: 0;
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      background: var(--void);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
       line-height: 1.6;
+      overflow-x: hidden;
+      cursor: default;
     }
-    .contact-card a {
-      display: inline-block;
-      margin-top: 15px;
-      color: var(--gold);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    .contact-card a:hover {
-      color: var(--gold-dark);
-    }
+    ::selection { background: rgba(200, 154, 66, 0.3); color: #fff; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
 
-    /* Social Links */
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
-    .social-links a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: var(--card);
-      border: 1px solid var(--border);
-      color: var(--gold);
-      font-size: 20px;
-      transition: all 0.3s ease;
-    }
-    .social-links a:hover {
-      background: var(--gold);
-      color: #000;
-      transform: translateY(-5px);
-      border-color: var(--gold);
-    }
-
-    /* Timeline */
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .timeline:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      width: 3px;
-      background: linear-gradient(to bottom, var(--gold), var(--gold-2));
-      transform: translateX(-50%);
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 50px;
-      width: 50%;
-      padding-right: 50px;
-    }
-    .timeline-item:nth-child(even) {
-      margin-left: 50%;
-      padding-right: 0;
-      padding-left: 50px;
-    }
-    .timeline-content {
-      padding: 30px;
-      background: var(--card);
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 30px var(--shadow);
-      transition: all 0.4s ease;
-    }
-    .timeline-content:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px var(--shadow);
-    }
-    .timeline-content h4 {
-      margin: 0 0 15px;
-      color: var(--gold);
-      font-family: "Montserrat", sans-serif;
-      font-size: 22px;
-      font-weight: 600;
-    }
-    .timeline-content p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-    }
-    .timeline-item:before {
-      content: '';
-      position: absolute;
-      top: 30px;
-      right: -10px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: var(--gold);
-      border: 4px solid var(--bg);
-      box-shadow: 0 0 0 3px var(--gold);
-    }
-    .timeline-item:nth-child(even):before {
-      right: auto;
-      left: -10px;
-    }
-
-    /* Placeholder images */
-    .placeholder {
-      background: linear-gradient(45deg, var(--border), var(--card));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--muted);
+    .font-display {
+      font-family: "Playfair Display", Georgia, serif;
       font-weight: 500;
-      text-align: center;
-      padding: 20px;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
     }
-    .placeholder.hero {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+    .font-mono {
+      font-family: "JetBrains Mono", monospace;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      font-size: 0.75rem;
+      text-transform: uppercase;
     }
-    .placeholder.large {
-      height: 400px;
-      border-radius: 20px;
+    .text-gradient {
+      background: linear-gradient(135deg, var(--gold-300) 0%, var(--gold-400) 50%, var(--gold-200) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
-    .placeholder.medium {
-      height: 300px;
-      border-radius: 20px;
-    }
-    .placeholder.small {
-      height: 200px;
-      border-radius: 20px;
-    }
-
-    /* Utility */
-    .muted{color:var(--muted)}
-    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
-    
-    /* Enhanced Scroll to top button */
-    .scroll-top {
-      position: fixed;
-      bottom: 40px;
-      right: 40px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background: var(--gold);
-      color: #000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 8px 30px rgba(200,154,66,0.3);
-      transition: all 0.4s ease;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-      border: none;
-      font-size: 20px;
-    }
-    .scroll-top.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    .scroll-top:hover {
-      transform: translateY(-8px) scale(1.1);
-      box-shadow: 0 15px 40px rgba(200,154,66,0.4);
-    }
-    
-    /* Loading animation */
-    .loading {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--bg);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      transition: opacity 0.5s ease, visibility 0.5s ease;
-    }
-    .loading.hide {
-      opacity: 0;
-      visibility: hidden;
-    }
-    .loader {
-      width: 70px;
-      height: 70px;
-      border: 5px solid rgba(200,154,66,0.2);
-      border-top: 5px solid var(--gold);
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-      margin-bottom: 20px;
-    }
-    .loading-text {
-      color: var(--gold);
-      font-family: "Montserrat", sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-    }
-    
-    /* Animations */
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    
-    /* Enhanced CTA Section */
-    .cta-section {
-      background: linear-gradient(135deg, rgba(200,154,66,0.1) 0%, rgba(200,154,66,0.05) 100%);
-      border-radius: 30px;
-      padding: 60px;
-      margin: 60px 0;
-    }
-    
-    /* Original Footer Design */
-    footer.site-footer{
-      padding:70px 0 30px;
-      background:linear-gradient(180deg,#050505,#000);
-      color:#ddd;
-      position: relative;
-    }
-    footer.site-footer:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-2));
-    }
-    .footer-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:30px;
-      margin-bottom: 40px;
-    }
-    .footer-grid a{color:inherit; transition: color 0.3s;}
-    .footer-grid a:hover { color: var(--gold); }
-    .small{font-size:14px;color:var(--muted)}
-    
-    /* Design Credit */
-    .design-credit {
-      text-align: center;
-      margin-top: 15px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-    .design-credit a {
-      color: var(--gold);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .design-credit a:hover {
-      color: var(--gold-light);
-      text-decoration: underline;
-    }
-    
-    @media (max-width:880px){
-      .overview-grid, .partnership .inner{grid-template-columns:1fr}
-      .hero h2{font-size:40px}
-      .brand h1{display:none}
-      .section-title h3 { font-size: 32px; }
-      .brand img { height: 60px; }
-      .hero {
-        padding: 140px 0 80px;
-      }
-      .nav-links a {
-        font-size: 14px;
-      }
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-      .cta-section {
-        padding: 40px 20px;
-      }
-      .timeline:before {
-        left: 30px;
-      }
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 0;
-      }
-      .timeline-item:nth-child(even) {
-        margin-left: 0;
-        padding-left: 70px;
-      }
-      .timeline-item:before {
-        left: 20px;
-        right: auto;
-      }
-      .timeline-item:nth-child(even):before {
-        left: 20px;
-      }
-    }
-    
-    /* Hover Effects */
-    .hover-lift {
-      transition: transform 0.3s ease;
-    }
-    .hover-lift:hover {
-      transform: translateY(-5px);
-    }
-    
-    /* Gradient Text */
-    .gradient-text {
-      background: linear-gradient(90deg, var(--gold), var(--gold-2));
+    .text-gradient-hero {
+      background: linear-gradient(180deg, #FFFFFF 0%, var(--gold-100) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 3rem);
+      position: relative;
+    }
+    .container-narrow { max-width: 980px; }
 
-    /* CLIENTS SHOWCASE - CESIS STYLE */
-.clients-showcase {
-  margin: 60px 0 40px;
-  overflow: hidden;
-  position: relative;
-}
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.4;
+    }
 
-.clients-row {
-  margin-bottom: 25px;
-  overflow: hidden;
-  position: relative;
-}
+    .glow-orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(120px);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.15;
+      will-change: transform;
+    }
+    .glow-orb-1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, var(--gold-400), transparent 70%);
+      top: -10%; left: -5%;
+    }
+    .glow-orb-2 {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, var(--gold-600), transparent 70%);
+      bottom: 10%; right: -10%;
+    }
+    .glow-orb-3 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, var(--gold-300), transparent 70%);
+      top: 40%; left: 50%;
+    }
 
-.clients-row:last-child {
-  margin-bottom: 0;
-}
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      transition: all var(--duration-normal) var(--ease-out-expo);
+    }
+    header.scrolled {
+      background: var(--glass-bg);
+      backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+      -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+      border-bottom: 1px solid var(--glass-border);
+    }
+    header.hidden { transform: translateY(-100%); }
 
-.clients-track {
-  display: flex;
-  width: max-content;
-  gap: 30px;
-  padding: 15px 0;
-}
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.25rem 0;
+      gap: 2rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-shrink: 0;
+    }
+    .brand img {
+      height: 52px;
+      width: auto;
+      transition: transform var(--duration-fast) var(--ease-out-expo);
+    }
+    .brand:hover img { transform: scale(1.05); }
+    .brand-text {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gold-300);
+      letter-spacing: 0.04em;
+    }
 
-/* First row - Scroll left */
-.clients-row-1 .clients-track {
-  animation: scrollLeft 40s linear infinite;
-  animation-play-state: running;
-}
+    .nav-links {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-family: "Inter", sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      padding: 0.625rem 1rem;
+      border-radius: 8px;
+      transition: all var(--duration-fast) var(--ease-out-expo);
+      position: relative;
+      overflow: hidden;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 6px; left: 50%;
+      width: 0; height: 1.5px;
+      background: var(--gold-400);
+      transition: all var(--duration-fast) var(--ease-out-expo);
+      transform: translateX(-50%);
+    }
+    .nav-links a:hover {
+      color: var(--text-primary);
+      background: rgba(200, 154, 66, 0.06);
+    }
+    .nav-links a:hover::after { width: 40%; }
 
-/* Second row - Scroll right */
-.clients-row-2 .clients-track {
-  animation: scrollRight 35s linear infinite;
-  animation-play-state: running;
-}
+    .nav-cta {
+      padding: 0.625rem 1.5rem;
+      background: var(--gold-400);
+      color: var(--void) !important;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.8125rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: all var(--duration-fast) var(--ease-out-expo);
+      border: 1px solid var(--gold-400);
+    }
+    .nav-cta:hover {
+      background: var(--gold-300);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(200, 154, 66, 0.25);
+    }
 
-/* Third row - Scroll left (optional, slightly slower) */
-.clients-row-3 .clients-track {
-  animation: scrollLeft 45s linear infinite;
-  animation-play-state: running;
-}
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text-primary);
+      padding: 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1.125rem;
+      transition: all var(--duration-fast);
+    }
+    .mobile-toggle:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-400);
+    }
 
-.client-item {
-  flex-shrink: 0;
-  padding: 25px 40px;
-  background: var(--card);
-  border: 2px solid rgba(200,154,66,0.2);
-  border-radius: 12px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  color: var(--gold);
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 300px;
-  height: 90px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 8rem 0 6rem;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: 
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(200,154,66,0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 80%, rgba(200,154,66,0.06) 0%, transparent 50%),
+        var(--void);
+    }
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(200,154,66,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(200,154,66,0.03) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 30%, transparent 70%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+    }
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 1.25rem;
+      border: 1px solid var(--glass-border);
+      border-radius: 100px;
+      background: rgba(200, 154, 66, 0.05);
+      backdrop-filter: blur(12px);
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out-expo) 0.2s forwards;
+    }
+    .hero-label .dot {
+      width: 6px; height: 6px;
+      background: var(--gold-400);
+      border-radius: 50%;
+      animation: pulse-gold 2s ease-in-out infinite;
+    }
+    .hero-label span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-300);
+    }
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 1s var(--ease-out-expo) 0.4s forwards;
+    }
+    .hero h1 .line { display: block; }
+    .hero h1 .line-accent {
+      color: var(--gold-300);
+      font-style: italic;
+    }
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 3rem;
+      line-height: 1.7;
+      font-weight: 400;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out-expo) 0.6s forwards;
+    }
+    .hero-cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s var(--ease-out-expo) 0.8s forwards;
+    }
 
-/* Add subtle gradient overlay on hover */
-.client-item:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, transparent, rgba(200,154,66,0.05), transparent);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      transition: all var(--duration-fast) var(--ease-out-expo);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      font-family: "Inter", sans-serif;
+    }
+    .btn-primary {
+      background: var(--gold-400);
+      color: var(--void);
+    }
+    .btn-primary:hover {
+      background: var(--gold-300);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(200, 154, 66, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .btn-outline:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-300);
+      background: rgba(200, 154, 66, 0.05);
+    }
+    .btn i { font-size: 0.875rem; transition: transform var(--duration-fast); }
+    .btn:hover i { transform: translateX(3px); }
 
-.client-item:hover:before {
-  opacity: 1;
-}
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeIn 1s ease 1.5s forwards;
+    }
+    .scroll-indicator span {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold-400), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
 
-/* Add gold accent on hover */
-.client-item:hover {
-  transform: translateY(-3px);
-  border-color: var(--gold);
-  box-shadow: 0 12px 25px rgba(200,154,66,0.15);
-}
+    section {
+      position: relative;
+      padding: var(--space-3xl) 0;
+    }
+    .section-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .section-label::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold-400);
+    }
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 500;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+    .section-subtitle {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.7;
+    }
 
-/* Add subtle pulse animation on hover */
-@keyframes pulse {
-  0% { box-shadow: 0 8px 20px rgba(200,154,66,0.1); }
-  50% { box-shadow: 0 8px 20px rgba(200,154,66,0.25); }
-  100% { box-shadow: 0 8px 20px rgba(200,154,66,0.1); }
-}
+    .marquee-section {
+      padding: var(--space-lg) 0;
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--depth);
+    }
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 3rem;
+      animation: marquee 30s linear infinite;
+    }
+    .marquee-item {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(1.5rem, 3vw, 2.5rem);
+      font-weight: 500;
+      color: var(--text-muted);
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+    }
+    .marquee-item::after {
+      content: '◆';
+      font-size: 0.5rem;
+      color: var(--gold-400);
+      opacity: 0.5;
+    }
 
-.client-item:hover {
-  animation: pulse 2s infinite;
-}
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: var(--space-xl);
+    }
+    .bento-item {
+      background: var(--surface);
+      padding: var(--space-lg) var(--space-md);
+      text-align: center;
+      transition: all var(--duration-normal) var(--ease-out-expo);
+      position: relative;
+      overflow: hidden;
+    }
+    .bento-item::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+      opacity: 0;
+      transition: opacity var(--duration-normal);
+    }
+    .bento-item:hover::before { opacity: 1; }
+    .bento-item:hover { background: var(--elevated); }
+    .bento-number {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      color: var(--gold-300);
+    }
+    .bento-label {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
 
-/* Carousel animations */
-@keyframes scrollLeft {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
+    .overview-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+    }
+    .overview-text p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .overview-visual { position: relative; }
+    .overview-visual-frame {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: var(--space-md);
+      background: var(--surface);
+      position: relative;
+    }
+    .overview-visual-frame::before {
+      content: '';
+      position: absolute;
+      top: -1px; left: 20%; right: 20%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+    }
+    .overview-visual-inner {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--elevated), var(--raised));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--border-subtle);
+      overflow: hidden;
+      position: relative;
+    }
+    .overview-visual-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(200,154,66,0.1), transparent 60%);
+    }
+    .overview-visual-inner i {
+      font-size: 4rem;
+      color: var(--gold-400);
+      opacity: 0.3;
+    }
 
-@keyframes scrollRight {
-  0% {
-    transform: translateX(-50%);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
+    .services-bento {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: var(--space-xl);
+    }
+    .service-bento-card {
+      background: var(--surface);
+      padding: var(--space-lg);
+      transition: all var(--duration-normal) var(--ease-out-expo);
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+    .service-bento-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--gold-400), var(--gold-300));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--duration-normal) var(--ease-out-expo);
+    }
+    .service-bento-card:hover::before { transform: scaleX(1); }
+    .service-bento-card:hover { background: var(--elevated); }
+    .service-bento-card .icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(200, 154, 66, 0.08);
+      border: 1px solid rgba(200, 154, 66, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all var(--duration-normal);
+    }
+    .service-bento-card:hover .icon-wrap {
+      background: rgba(200, 154, 66, 0.15);
+      transform: scale(1.05);
+    }
+    .service-bento-card .icon-wrap i {
+      font-size: 1.25rem;
+      color: var(--gold-400);
+    }
+    .service-bento-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+    .service-bento-card p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
 
-/* Gradient overlay for fading edges */
-.clients-row:before,
-.clients-row:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 150px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
+    .clients-section {
+      padding: var(--space-xl) 0;
+      overflow: hidden;
+    }
+    .clients-track {
+      display: flex;
+      width: max-content;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    .clients-track-1 { animation: scrollLeft 35s linear infinite; }
+    .clients-track-2 { animation: scrollRight 30s linear infinite; }
+    .client-pill {
+      flex-shrink: 0;
+      padding: 1rem 2rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      white-space: nowrap;
+      transition: all var(--duration-fast);
+    }
+    .client-pill:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-300);
+      background: rgba(200, 154, 66, 0.05);
+    }
+    .clients-row {
+      position: relative;
+      margin-bottom: 1rem;
+    }
+    .clients-row::before,
+    .clients-row::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 150px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .clients-row::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--void), transparent);
+    }
+    .clients-row::after {
+      right: 0;
+      background: linear-gradient(90deg, transparent, var(--void));
+    }
 
-.clients-row:before {
-  left: 0;
-  background: linear-gradient(90deg, var(--bg) 20%, transparent 100%);
-}
+    .timeline-container {
+      position: relative;
+      max-width: 800px;
+      margin: var(--space-xl) auto 0;
+    }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0; bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, transparent, var(--gold-400) 10%, var(--gold-400) 90%, transparent);
+      transform: translateX(-50%);
+    }
+    .timeline-node {
+      position: relative;
+      margin-bottom: var(--space-lg);
+      width: calc(50% - 40px);
+    }
+    .timeline-node:nth-child(even) {
+      margin-left: calc(50% + 40px);
+    }
+    .timeline-node::before {
+      content: '';
+      position: absolute;
+      top: 1.5rem;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--gold-400);
+      border: 3px solid var(--void);
+      box-shadow: 0 0 0 1px var(--gold-400), 0 0 20px rgba(200,154,66,0.3);
+    }
+    .timeline-node:nth-child(odd)::before { right: -46px; }
+    .timeline-node:nth-child(even)::before { left: -46px; }
+    .timeline-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: var(--space-md);
+      transition: all var(--duration-normal) var(--ease-out-expo);
+    }
+    .timeline-card:hover {
+      border-color: var(--glass-border-strong);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .timeline-year {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: 0.5rem;
+    }
+    .timeline-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--text-primary);
+    }
+    .timeline-card p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
 
-.clients-row:after {
-  right: 0;
-  background: linear-gradient(90deg, transparent 0%, var(--bg) 80%);
-}
+    .partnership-section {
+      position: relative;
+      padding: var(--space-3xl) 0;
+      overflow: hidden;
+    }
+    .partnership-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(200,154,66,0.08) 0%, transparent 50%, rgba(200,154,66,0.04) 100%);
+      z-index: 0;
+    }
+    .partnership-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xl);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .partnership-text p {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .partnership-visual { position: relative; }
+    .partnership-visual::before {
+      content: '';
+      position: absolute;
+      top: -20px; left: -20px;
+      width: 100%; height: 100%;
+      border: 1px solid var(--gold-400);
+      border-radius: 16px;
+      opacity: 0.3;
+    }
+    .partnership-visual-inner {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--elevated), var(--raised));
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .partnership-visual-inner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(200,154,66,0.12), transparent 60%);
+    }
+    .partnership-visual-inner i {
+      font-size: 4rem;
+      color: var(--gold-400);
+      opacity: 0.4;
+    }
 
-/* Responsive design */
-@media (max-width: 1200px) {
-  .client-item {
-    min-width: 250px;
-    height: 80px;
-    font-size: 18px;
-    padding: 20px 30px;
-  }
-  
-  .clients-track {
-    gap: 25px;
-  }
-}
+    .vm-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: var(--space-xl);
+    }
+    .vm-card {
+      background: var(--surface);
+      padding: var(--space-lg);
+      transition: all var(--duration-normal);
+      position: relative;
+    }
+    .vm-card:hover { background: var(--elevated); }
+    .vm-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+      color: var(--gold-300);
+    }
+    .vm-card p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
 
-@media (max-width: 992px) {
-  .client-item {
-    min-width: 220px;
-    height: 75px;
-    font-size: 16px;
-    padding: 18px 25px;
-  }
-  
-  .clients-track {
-    gap: 20px;
-  }
-  
-  .clients-row-1 .clients-track {
-    animation: scrollLeft 35s linear infinite;
-  }
-  
-  .clients-row-2 .clients-track {
-    animation: scrollRight 30s linear infinite;
-  }
-  
-  .clients-row-3 .clients-track {
-    animation: scrollLeft 40s linear infinite;
-  }
-}
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-top: var(--space-xl);
+    }
+    .value-card {
+      background: var(--surface);
+      padding: var(--space-lg) var(--space-md);
+      text-align: center;
+      transition: all var(--duration-normal);
+    }
+    .value-card:hover { background: var(--elevated); }
+    .value-card .value-icon {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+      transition: all var(--duration-normal);
+    }
+    .value-card:hover .value-icon {
+      border-color: var(--gold-400);
+      background: rgba(200, 154, 66, 0.08);
+    }
+    .value-card .value-icon i {
+      font-size: 1.25rem;
+      color: var(--gold-400);
+    }
+    .value-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+    .value-card p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
 
-@media (max-width: 768px) {
-  .client-item {
-    min-width: 200px;
-    height: 70px;
-    font-size: 15px;
-    padding: 15px 20px;
-  }
-  
-  .clients-track {
-    gap: 15px;
-  }
-  
-  .clients-showcase {
-    margin: 40px 0 30px;
-  }
-  
-  .clients-row {
-    margin-bottom: 20px;
-  }
-  
-  .clients-row:before,
-  .clients-row:after {
-    width: 80px;
-  }
-}
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: var(--space-xl);
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: var(--space-lg);
+      text-align: center;
+      transition: all var(--duration-normal) var(--ease-out-expo);
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-400), transparent);
+      opacity: 0;
+      transition: opacity var(--duration-normal);
+    }
+    .contact-card:hover::before { opacity: 1; }
+    .contact-card:hover {
+      border-color: var(--glass-border-strong);
+      transform: translateY(-6px);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.3);
+    }
+    .contact-card .contact-icon {
+      width: 64px; height: 64px;
+      border-radius: 16px;
+      background: rgba(200, 154, 66, 0.08);
+      border: 1px solid rgba(200, 154, 66, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .contact-card .contact-icon i {
+      font-size: 1.5rem;
+      color: var(--gold-400);
+    }
+    .contact-card h4 {
+      font-family: "Playfair Display", serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      color: var(--text-primary);
+    }
+    .contact-card p {
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .contact-card a {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      transition: color var(--duration-fast);
+    }
+    .contact-card a:hover { color: var(--gold-200); }
 
-@media (max-width: 576px) {
-  .client-item {
-    min-width: 180px;
-    height: 65px;
-    font-size: 14px;
-    padding: 12px 18px;
-  }
-  
-  .clients-track {
-    gap: 12px;
-  }
-  
-  .clients-row-1 .clients-track {
-    animation: scrollLeft 30s linear infinite;
-  }
-  
-  .clients-row-2 .clients-track {
-    animation: scrollRight 25s linear infinite;
-  }
-  
-  .clients-row-3 .clients-track {
-    animation: scrollLeft 35s linear infinite;
-  }
-  
-  .clients-row:before,
-  .clients-row:after {
-    width: 50px;
-  }
-}
+    .cta-section {
+      position: relative;
+      padding: var(--space-3xl) 0;
+      overflow: hidden;
+    }
+    .cta-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(200,154,66,0.06) 0%, transparent 50%, rgba(200,154,66,0.03) 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .cta-inner {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .cta-inner h3 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+    .cta-inner p {
+      font-size: 1.125rem;
+      color: var(--text-secondary);
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
 
-/* For very small screens, reduce to 2 rows */
-@media (max-width: 480px) {
-  .clients-row-3 {
-    display: none;
-  }
-  
-  .client-item {
-    min-width: 170px;
-    height: 60px;
-    font-size: 13px;
-    padding: 10px 15px;
-  }
-  
-  .clients-track {
-    gap: 10px;
-  }
-}
+    footer {
+      background: var(--abyss);
+      border-top: 1px solid var(--border);
+      padding: var(--space-2xl) 0 var(--space-lg);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: var(--space-xl);
+      margin-bottom: var(--space-xl);
+    }
+    .footer-brand img {
+      height: 52px;
+      margin-bottom: 1.25rem;
+    }
+    .footer-brand p {
+      font-size: 0.9375rem;
+      color: var(--text-tertiary);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: "JetBrains Mono", monospace;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-400);
+      margin-bottom: 1.5rem;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 0.9375rem;
+      color: var(--text-tertiary);
+      padding: 0.375rem 0;
+      transition: color var(--duration-fast);
+    }
+    .footer-col a:hover { color: var(--text-primary); }
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: var(--space-md);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .footer-social a {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-tertiary);
+      font-size: 0.875rem;
+      transition: all var(--duration-fast);
+    }
+    .footer-social a:hover {
+      border-color: var(--gold-400);
+      color: var(--gold-400);
+      background: rgba(200, 154, 66, 0.05);
+    }
 
-/* Optional: Add slight delays for staggered animation */
-.clients-row-2 .clients-track {
-  animation-delay: -10s;
-}
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--gold-400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all var(--duration-normal) var(--ease-out-expo);
+      z-index: 1000;
+      font-size: 1rem;
+    }
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .scroll-top:hover {
+      background: var(--elevated);
+      border-color: var(--gold-400);
+      transform: translateY(-4px);
+    }
 
-.clients-row-3 .clients-track {
-  animation-delay: -5s;
-}
+    .loading {
+      position: fixed;
+      inset: 0;
+      background: var(--void);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10000;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+    }
+    .loading.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    .loading-logo {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      color: var(--gold-400);
+      margin-bottom: 2rem;
+      letter-spacing: 0.1em;
+    }
+    .loading-bar {
+      width: 120px;
+      height: 1px;
+      background: var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .loading-bar::after {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: var(--gold-400);
+      animation: loadingSlide 1.5s ease-in-out infinite;
+    }
 
-/* Ensure smooth animation performance */
-.clients-track {
-  will-change: transform;
-  backface-visibility: hidden;
-}
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes pulse-gold {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.3); }
+    }
+    @keyframes scrollPulse {
+      0%, 100% { transform: scaleY(1); opacity: 1; }
+      50% { transform: scaleY(0.6); opacity: 0.5; }
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @keyframes scrollRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+    @keyframes loadingSlide {
+      0% { left: -100%; }
+      50% { left: 0; }
+      100% { left: 100%; }
+    }
 
-/* Pause animation on hover (optional) */
-.clients-row:hover .clients-track {
-  animation-play-state: paused;
-}
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* Alternative: Slower animation on hover */
-.clients-row:hover .clients-track {
-  animation-duration: 80s;
-}
+    @media (max-width: 1024px) {
+      .bento-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-bento { grid-template-columns: repeat(2, 1fr); }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+      .overview-layout { grid-template-columns: 1fr; }
+      .partnership-grid { grid-template-columns: 1fr; }
+      .vm-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .mobile-toggle { display: inline-flex; }
+      .bento-grid { grid-template-columns: 1fr; }
+      .services-bento { grid-template-columns: 1fr; }
+      .values-grid { grid-template-columns: 1fr; }
+      .timeline-line { left: 20px; }
+      .timeline-node { width: 100%; padding-left: 60px; margin-left: 0 !important; }
+      .timeline-node::before { left: 14px !important; right: auto !important; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+      section { padding: var(--space-2xl) 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
   </style>
 
-  <!-- Enhanced JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -1167,10 +1243,7 @@
     "url": "https://cgholdings.co.za/",
     "logo": "https://cgholdings.co.za/logo.png",
     "foundingDate": "2016",
-    "founders": [{
-      "@type": "Person",
-      "name": "John Chauke"
-    }],
+    "founders": [{"@type": "Person", "name": "John Chauke"}],
     "numberOfEmployees": "50",
     "description": "Chauke Group Holdings is a diversified South African holding company delivering infrastructure, engineering, logistics, security, energy and business services.",
     "contactPoint": [{
@@ -1187,321 +1260,315 @@
       "addressRegion": "Gauteng",
       "postalCode": "0157",
       "addressCountry": "ZA"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/chaukegroup",
-      "https://twitter.com/ChaukeGroup",
-      "https://facebook.com/ChaukeGroup"
-    ]
+    }
   }
   </script>
+<base target="_blank">
 </head>
 <body>
   <!-- Loading Screen -->
   <div class="loading" id="loading">
-    <div class="loader"></div>
-    <div class="loading-text">Loading Chauke Group Holdings</div>
+    <div class="loading-logo">CGH</div>
+    <div class="loading-bar"></div>
   </div>
 
-  <!-- Scroll to top button -->
+  <!-- Ambient Glow Orbs -->
+  <div class="glow-orb glow-orb-1"></div>
+  <div class="glow-orb glow-orb-2"></div>
+  <div class="glow-orb glow-orb-3"></div>
+
+  <!-- Scroll to Top -->
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
+    <i class="fas fa-arrow-up"></i>
   </button>
 
   <!-- HEADER -->
-  <header role="banner" aria-label="Site header" id="mainHeader">
-    <div class="container nav">
-      <div class="brand" aria-hidden="false">
-        <!-- Logo size increased to 70px -->
-        <img src="./logo.png" alt="Chauke Group Holdings - Diversified Business Solutions" width="180" height="70" />
-        <h1 class="sr-only">Chauke Group Holdings</h1>
-      </div>
+  <header id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <a href="#home" class="brand">
+          <img src="./logo.png" alt="Chauke Group Holdings" />
+          <span class="brand-text">Chauke Group</span>
+        </a>
 
-      <nav role="navigation" aria-label="Primary navigation" class="nav-links" id="mainNav">
-        <a href="#home">Home</a>
-        <a href="#overview">Overview</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Clients</a>
-        <a href="#timeline">History</a>
-        <a href="#partnership">Partnership</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <nav class="nav-links" id="mainNav" aria-label="Primary navigation">
+          <a href="#home">Home</a>
+          <a href="#overview">Overview</a>
+          <a href="#services">Services</a>
+          <a href="#clients">Clients</a>
+          <a href="#timeline">History</a>
+          <a href="#partnership">Partnership</a>
+          <a href="#contact" class="nav-cta">Contact</a>
+        </nav>
 
-      <div class="nav-actions">
-        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav" title="Open menu">
-          <i class="fas fa-bars" aria-hidden="true"></i>
-          <span class="sr-only">Open Menu</span>
+        <button class="mobile-toggle" id="mobileToggle" aria-expanded="false" aria-controls="mainNav">
+          <i class="fas fa-bars"></i>
         </button>
       </div>
     </div>
   </header>
 
-  <main id="home" role="main">
-    <!-- HERO - Centered Content -->
-    <section class="hero" aria-label="Hero" style="background-image: url(''); background-size: cover; background-position: center;">
+  <main id="home">
+    <!-- HERO SECTION -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg"></div>
+      <div class="hero-grid"></div>
+
       <div class="container">
         <div class="hero-content">
-          <h2>DRIVING EXCELLENCE THROUGH DIVERSIFICATION</h2>
-          <p>Chauke Group Holdings is a dynamic, multidisciplinary company committed to delivering a broad spectrum of professional services across various sectors — infrastructure, engineering, logistics, energy, security and business operations.</p>
+          <div class="hero-label">
+            <span class="dot"></span>
+            <span>Est. 2016 &mdash; South Africa</span>
+          </div>
 
-          <div class="cta">
-            <a class="btn" href="#services">
-              <span>Explore Our Services</span>
+          <h1>
+            <span class="line">Driving Excellence</span>
+            <span class="line line-accent">Through Diversification</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            A dynamic, multidisciplinary holding company delivering professional services across infrastructure, engineering, logistics, energy, security and business operations.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#services" class="btn btn-primary">
+              <span>Explore Services</span>
               <i class="fas fa-arrow-right"></i>
             </a>
-            <a class="btn secondary" href="#contact">
-              <span>Contact Us</span>
-              <i class="fas fa-envelope"></i>
+            <a href="#contact" class="btn btn-outline">
+              <span>Get in Touch</span>
             </a>
           </div>
         </div>
       </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
     </section>
 
-    <!-- STATS -->
-    <section class="stats" aria-label="Company statistics">
+    <!-- MARQUEE DIVIDER -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span class="marquee-item">Professional Services</span>
+        <span class="marquee-item">Infrastructure</span>
+        <span class="marquee-item">Logistics</span>
+        <span class="marquee-item">Energy Solutions</span>
+        <span class="marquee-item">Security</span>
+        <span class="marquee-item">Engineering</span>
+        <span class="marquee-item">Professional Services</span>
+        <span class="marquee-item">Infrastructure</span>
+        <span class="marquee-item">Logistics</span>
+        <span class="marquee-item">Energy Solutions</span>
+        <span class="marquee-item">Security</span>
+        <span class="marquee-item">Engineering</span>
+      </div>
+    </div>
+
+    <!-- STATS BENTO GRID -->
+    <section class="stats-section" aria-label="Company statistics">
       <div class="container">
-        <div class="stats-grid">
-          <div class="stat">
-            <h3 class="count" id="yearsOfExcellence" data-target="10">10</h3>
-            <p>Years of Excellence</p>
+        <div class="bento-grid">
+          <div class="bento-item reveal">
+            <div class="bento-number count" data-target="10">0</div>
+            <div class="bento-label">Years of Excellence</div>
           </div>
-          <div class="stat">
-            <h3 class="count" data-target="120">120</h3>
-            <p>Projects Completed</p>
+          <div class="bento-item reveal reveal-delay-1">
+            <div class="bento-number count" data-target="120">0</div>
+            <div class="bento-label">Projects Completed</div>
           </div>
-          <div class="stat">
-            <h3 class="count" data-target="50">50</h3>
-            <p>Dedicated Team Members</p>
+          <div class="bento-item reveal reveal-delay-2">
+            <div class="bento-number count" data-target="50">0</div>
+            <div class="bento-label">Team Members</div>
           </div>
-          <div class="stat">
-            <h3 class="count" data-target="4">4</h3>
-            <p>Core Business Divisions</p>
+          <div class="bento-item reveal reveal-delay-3">
+            <div class="bento-number count" data-target="4">0</div>
+            <div class="bento-label">Core Divisions</div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- OVERVIEW -->
-    <section id="overview" class="content" aria-labelledby="overviewTitle">
+    <section id="overview" class="overview-section" aria-labelledby="overviewTitle">
       <div class="container">
-        <div class="section-title">
-          <h3 id="overviewTitle">Company Overview</h3>
-          <p class="muted">Delivering excellence through diversified operations and strategic partnerships.</p>
-        </div>
+        <div class="section-label reveal">About Us</div>
+        <h2 class="section-title reveal" id="overviewTitle">Company Overview</h2>
+        <p class="section-subtitle reveal">Delivering excellence through diversified operations and strategic partnerships.</p>
 
-        <div class="overview-grid">
-          <div class="text">
-            <div class="card">
-              <p>Chauke Group Holdings is a dynamic, multidisciplinary company committed to delivering a broad spectrum of professional services across various sectors. Our business model is built on flexibility, innovation, and strategic partnerships, allowing us to adapt to diverse client needs and market demands.</p>
-              <p>We continuously evolve and expand into new industries where we can add value and drive growth, positioning ourselves as a versatile partner for businesses seeking comprehensive solutions. With over <span id="yearsExperienceText">10</span> years of industry experience, we've built a reputation for excellence, reliability, and innovation across all our service divisions.</p>
-              <p>Our commitment to quality and client satisfaction has earned us recognition as a trusted partner in South Africa's business landscape. We pride ourselves on our ability to deliver integrated solutions that address complex challenges while maintaining the highest standards of professionalism and ethical conduct.</p>
-              <p><a class="btn" href="#contact">Get In Touch</a></p>
+        <div class="overview-layout" style="margin-top: var(--space-xl);">
+          <div class="overview-text reveal">
+            <p>Chauke Group Holdings is a dynamic, multidisciplinary company committed to delivering a broad spectrum of professional services across various sectors. Our business model is built on flexibility, innovation, and strategic partnerships.</p>
+            <p>We continuously evolve and expand into new industries where we can add value and drive growth, positioning ourselves as a versatile partner for businesses seeking comprehensive solutions.</p>
+            <p>Our commitment to quality and client satisfaction has earned us recognition as a trusted partner in South Africa's business landscape.</p>
+            <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">
+              <span>Get In Touch</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="overview-visual reveal reveal-delay-2">
+            <div class="overview-visual-frame">
+              <div class="overview-visual-inner">
+                <i class="fas fa-building"></i>
+              </div>
             </div>
           </div>
-
-          <div>
-            <!--<div class="card placeholder large">
-              Corporate Image Placeholder<br>Replace with assets/images/overview.webp
-            </div>-->
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="content" aria-labelledby="servicesTitle">
+    <!-- SERVICES BENTO GRID -->
+    <section id="services" class="services-section" aria-labelledby="servicesTitle">
       <div class="container">
-        <div class="section-title">
-          <h3 id="servicesTitle">Our Core Services</h3>
-          <p class="muted">Comprehensive solutions tailored to your business needs.</p>
-        </div>
+        <div class="section-label reveal">What We Do</div>
+        <h2 class="section-title reveal" id="servicesTitle">Our Core Services</h2>
+        <p class="section-subtitle reveal">Comprehensive solutions tailored to your business needs.</p>
 
-        <div class="services-grid">
-          <article class="service-card" aria-labelledby="s1">
-            <div class="icon" aria-hidden="true"><i class="fas fa-briefcase"></i></div>
-            <h4 id="s1">Professional Services</h4>
-            <p>Strategic consulting, financial advisory, and business development services to help organizations achieve sustainable growth and operational excellence. Our experienced consultants provide insights and strategies to optimize business performance.</p>
+        <div class="services-bento">
+          <article class="service-bento-card reveal">
+            <div class="icon-wrap"><i class="fas fa-briefcase"></i></div>
+            <h4>Professional Services</h4>
+            <p>Strategic consulting, financial advisory, and business development services to help organizations achieve sustainable growth.</p>
           </article>
 
-          <article class="service-card" aria-labelledby="s2">
-            <div class="icon" aria-hidden="true"><i class="fas fa-network-wired"></i></div>
-            <h4 id="s2">Information & Communication</h4>
-            <p>Through our partnership with Vodacom,We implement cutting-edge technologies to enhance productivity and security.</p>
+          <article class="service-bento-card reveal reveal-delay-1">
+            <div class="icon-wrap"><i class="fas fa-network-wired"></i></div>
+            <h4>Information & Communication</h4>
+            <p>Through our partnership with Vodacom, we implement cutting-edge technologies to enhance productivity and security.</p>
           </article>
 
-          <article class="service-card" aria-labelledby="s3">
-            <div class="icon" aria-hidden="true"><i class="fas fa-clipboard-check"></i></div>
-            <h4 id="s3">Administrative Support</h4>
-            <p>Comprehensive administrative, HR, and operational support services designed to streamline processes and enhance organizational efficiency. Our solutions help businesses focus on their core competencies.</p>
+          <article class="service-bento-card reveal reveal-delay-2">
+            <div class="icon-wrap"><i class="fas fa-clipboard-check"></i></div>
+            <h4>Administrative Support</h4>
+            <p>Comprehensive administrative, HR, and operational support services designed to streamline processes.</p>
           </article>
 
-          <article class="service-card" aria-labelledby="s4">
-            <div class="icon" aria-hidden="true"><i class="fas fa-shipping-fast"></i></div>
-            <h4 id="s4">Logistics & Supply Chain</h4>
-            <p>End-to-end logistics, warehousing, distribution, and supply chain management solutions to optimize operations and reduce costs. We ensure timely delivery and efficient resource management.</p>
+          <article class="service-bento-card reveal">
+            <div class="icon-wrap"><i class="fas fa-shipping-fast"></i></div>
+            <h4>Logistics & Supply Chain</h4>
+            <p>End-to-end logistics, warehousing, distribution, and supply chain management solutions.</p>
           </article>
 
-          <article class="service-card" aria-labelledby="s5">
-            <div class="icon" aria-hidden="true"><i class="fas fa-solar-panel"></i></div>
-            <h4 id="s5">Energy Solutions</h4>
-            <p>Renewable energy, solar installations, and power infrastructure supply. We help businesses transition to sustainable energy sources while maintaining operational efficiency and cost-effectiveness.</p>
+          <article class="service-bento-card reveal reveal-delay-1">
+            <div class="icon-wrap"><i class="fas fa-solar-panel"></i></div>
+            <h4>Energy Solutions</h4>
+            <p>Renewable energy, solar installations, and power infrastructure supply for sustainable transitions.</p>
           </article>
 
-          <article class="service-card" aria-labelledby="s6">
-            <div class="icon" aria-hidden="true"><i class="fas fa-users"></i></div>
-            <h4 id="s6">Consulting & Operations</h4>
-            <p>Operational consulting, project management and optimization across business divisions. Our experts provide guidance to improve processes, increase productivity, and drive growth.</p>
+          <article class="service-bento-card reveal reveal-delay-2">
+            <div class="icon-wrap"><i class="fas fa-users"></i></div>
+            <h4>Consulting & Operations</h4>
+            <p>Operational consulting, project management and optimization across business divisions.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CLIENTS CAROUSEL -->
-<section id="clients" class="content" aria-labelledby="clientsTitle">
-  <div class="container">
-    <div class="section-title">
-      <h3 id="clientsTitle">Our Valued Clients</h3>
-      <p class="muted">Trusted by industry leaders and public institutions across South Africa</p>
-    </div>
+    <!-- CLIENTS INFINITE SCROLL -->
+    <section id="clients" class="clients-section" aria-labelledby="clientsTitle">
+      <div class="container" style="margin-bottom: var(--space-lg);">
+        <div class="section-label reveal">Trusted By</div>
+        <h2 class="section-title reveal" id="clientsTitle">Our Valued Clients</h2>
+        <p class="section-subtitle reveal">Industry leaders and public institutions across South Africa</p>
+      </div>
 
-    <div class="clients-showcase">
-      <!-- First Row - Scrolls Left -->
-      <div class="clients-row clients-row-1">
-        <div class="clients-track">
-          <!-- First set -->
-          <div class="client-item">CSIR</div>
-          <div class="client-item">DEPARTMENT OF CORRECTIONAL SERVICES</div>
-          <div class="client-item">GEOROSA AFRICA</div>
-          <div class="client-item">ESKOM</div>
-          <div class="client-item">DEPARTMENT OF DEFENCE</div>
-          <div class="client-item">SAPS</div>
-          <div class="client-item">GLENCORE</div>
-          <div class="client-item">AGREMENT SA</div>
-          
-          <!-- Duplicate set for seamless loop -->
-          <div class="client-item">CSIR</div>
-          <div class="client-item">DEPARTMENT OF CORRECTIONAL SERVICES</div>
-          <div class="client-item">GEOROSA AFRICA</div>
-          <div class="client-item">ESKOM</div>
-          <div class="client-item">DEPARTMENT OF DEFENCE</div>
-          <div class="client-item">SAPS</div>
-          <div class="client-item">GLENCORE</div>
-          <div class="client-item">AGREMENT SA</div>
+      <div class="clients-row">
+        <div class="clients-track clients-track-1">
+          <span class="client-pill">CSIR</span>
+          <span class="client-pill">Department of Correctional Services</span>
+          <span class="client-pill">Georosa Africa</span>
+          <span class="client-pill">Eskom</span>
+          <span class="client-pill">Department of Defence</span>
+          <span class="client-pill">SAPS</span>
+          <span class="client-pill">Glencore</span>
+          <span class="client-pill">Agrement SA</span>
+          <span class="client-pill">CSIR</span>
+          <span class="client-pill">Department of Correctional Services</span>
+          <span class="client-pill">Georosa Africa</span>
+          <span class="client-pill">Eskom</span>
+          <span class="client-pill">Department of Defence</span>
+          <span class="client-pill">SAPS</span>
+          <span class="client-pill">Glencore</span>
+          <span class="client-pill">Agrement SA</span>
         </div>
       </div>
 
-      <!-- Second Row - Scrolls Right -->
-      <div class="clients-row clients-row-2">
-        <div class="clients-track">
-          <!-- First set -->
-          <div class="client-item">ACSA</div>
-          <div class="client-item">AIRFORCE</div>
-          <div class="client-item">TRANSNET</div>
-          <div class="client-item">GAUTENG HEALTH</div>
-          <div class="client-item">IEC</div>
-          <div class="client-item">SACE</div>
-          <div class="client-item">VODACOM</div>
-          
-          <!-- Duplicate set for seamless loop -->
-          <div class="client-item">ACSA</div>
-          <div class="client-item">AIRFORCE</div>
-          <div class="client-item">TRANSNET</div>
-          <div class="client-item">GAUTENG HEALTH</div>
-          <div class="client-item">IEC</div>
-          <div class="client-item">SACE</div>
-          <div class="client-item">VODACOM</div>
+      <div class="clients-row">
+        <div class="clients-track clients-track-2">
+          <span class="client-pill">ACSA</span>
+          <span class="client-pill">Airforce</span>
+          <span class="client-pill">Transnet</span>
+          <span class="client-pill">Gauteng Health</span>
+          <span class="client-pill">IEC</span>
+          <span class="client-pill">SACE</span>
+          <span class="client-pill">Vodacom</span>
+          <span class="client-pill">ACSA</span>
+          <span class="client-pill">Airforce</span>
+          <span class="client-pill">Transnet</span>
+          <span class="client-pill">Gauteng Health</span>
+          <span class="client-pill">IEC</span>
+          <span class="client-pill">SACE</span>
+          <span class="client-pill">Vodacom</span>
         </div>
       </div>
-
-      <!-- Optional: Third Row - Scrolls Left (if you want more rows) -->
-      <div class="clients-row clients-row-3">
-        <div class="clients-track">
-          <!-- Mix of clients -->
-          <div class="client-item">CSIR</div>
-          <div class="client-item">ESKOM</div>
-          <div class="client-item">TRANSNET</div>
-          <div class="client-item">VODACOM</div>
-          <div class="client-item">SAPS</div>
-          <div class="client-item">ACSA</div>
-          <div class="client-item">GLENCORE</div>
-          
-          <!-- Duplicate set -->
-          <div class="client-item">CSIR</div>
-          <div class="client-item">ESKOM</div>
-          <div class="client-item">TRANSNET</div>
-          <div class="client-item">VODACOM</div>
-          <div class="client-item">SAPS</div>
-          <div class="client-item">ACSA</div>
-          <div class="client-item">GLENCORE</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    
+    </section>
     <!-- TIMELINE -->
-    <section id="timeline" class="content" aria-labelledby="timelineTitle">
+    <section id="timeline" class="timeline-section" aria-labelledby="timelineTitle">
       <div class="container">
-        <div class="section-title">
-          <h3 id="timelineTitle">Our Journey</h3>
-          <p class="muted">Key milestones in our growth and development since 2016</p>
-        </div>
+        <div class="section-label reveal">Our Journey</div>
+        <h2 class="section-title reveal" id="timelineTitle">Key Milestones</h2>
+        <p class="section-subtitle reveal">Growth and development since 2016</p>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2016 - Foundation</h4>
-              <p>Chauke Group Holdings was established with a vision to create a diversified holding company serving multiple industries across South Africa.</p>
+        <div class="timeline-container">
+          <div class="timeline-line"></div>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-card">
+              <div class="timeline-year">2016</div>
+              <h4>Foundation</h4>
+              <p>Chauke Group Holdings was established with a vision to create a diversified holding company.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2017 - Initial Growth</h4>
-              <p>Secured our first major contracts in professional services and established key partnerships with government institutions.</p>
+
+          <div class="timeline-node reveal reveal-delay-1">
+            <div class="timeline-card">
+              <div class="timeline-year">2018</div>
+              <h4>Expansion</h4>
+              <p>Expanded service portfolio to include logistics, supply chain, and infrastructure development.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2018 - Expansion</h4>
-              <p>Expanded our service portfolio to include logistics, supply chain management, and infrastructure development services.</p>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-card">
+              <div class="timeline-year">2020</div>
+              <h4>Resilience</h4>
+              <p>Adapted to global challenges with innovative remote service delivery models.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2019 - Diversification</h4>
-              <p>Entered the energy solutions market and established our information technology division to offer comprehensive digital services.</p>
+
+          <div class="timeline-node reveal reveal-delay-1">
+            <div class="timeline-card">
+              <div class="timeline-year">2021</div>
+              <h4>Strategic Partnership</h4>
+              <p>Acquired significant stake in Plethora Plastic Engineers, expanding manufacturing capabilities.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2020 - Resilience</h4>
-              <p>Adapted to global challenges by developing innovative remote service delivery models and expanding our digital capabilities.</p>
+
+          <div class="timeline-node reveal">
+            <div class="timeline-card">
+              <div class="timeline-year">2023</div>
+              <h4>Innovation & Technology</h4>
+              <p>Invested in cutting-edge technologies and sustainable green energy solutions.</p>
             </div>
           </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2021 - Strategic Partnership</h4>
-              <p>Acquired significant stake in Plethora Plastic Engineers, expanding our manufacturing capabilities and industrial footprint.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2022 - National Recognition</h4>
-              <p>Gained recognition as a trusted partner for major national projects and expanded our team to over 50 dedicated professionals.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2023 - Innovation & Technology</h4>
-              <p>Invested in cutting-edge technologies and sustainable solutions, positioning ourselves as leaders in green energy and digital transformation.</p>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-content">
-              <h4>2024 - Vision 2030</h4>
-              <p>Launched our strategic roadmap for sustainable growth, international expansion, and continued excellence in service delivery.</p>
+
+          <div class="timeline-node reveal reveal-delay-1">
+            <div class="timeline-card">
+              <div class="timeline-year">2024</div>
+              <h4>Vision 2030</h4>
+              <p>Launched strategic roadmap for sustainable growth and international expansion.</p>
             </div>
           </div>
         </div>
@@ -1509,462 +1576,375 @@
     </section>
 
     <!-- PARTNERSHIP -->
-    <section id="partnership" class="partnership" aria-labelledby="partTitle">
-      <div class="placeholder hero">
-        
-      </div>
-      <div class="container inner">
-        <div>
-          <h3 id="partTitle" style="color:var(--gold);margin-top:0">Strategic Partnership</h3>
-          <p style="opacity:.95">Chauke Group Holdings holds a significant stake in Plethora Plastic Engineers — a forward-thinking plastic manufacturing company. This partnership strengthens our footprint in the manufacturing sector, enabling industrial development, innovation, and local economic empowerment.</p>
-          <p style="opacity:.95">Plethora specializes in custom plastic injection molding, product design and sustainable manufacturing solutions for various industries including automotive, packaging and consumer goods.</p>
-          <p style="opacity:.95">Through this strategic alliance, we leverage synergies to deliver comprehensive solutions to our clients while promoting sustainable manufacturing practices and local content development.</p>
-          <p><a class="btn" href="#contact">Learn More</a></p>
-        </div>
+    <section id="partnership" class="partnership-section" aria-labelledby="partTitle">
+      <div class="partnership-bg"></div>
+      <div class="container">
+        <div class="partnership-grid">
+          <div class="partnership-text reveal">
+            <div class="section-label">Strategic Alliance</div>
+            <h2 class="section-title" id="partTitle" style="margin-bottom: 1.5rem;">Plethora Plastic Engineers</h2>
+            <p>Chauke Group Holdings holds a significant stake in Plethora Plastic Engineers — a forward-thinking plastic manufacturing company. This partnership strengthens our footprint in the manufacturing sector.</p>
+            <p>Plethora specializes in custom plastic injection molding, product design and sustainable manufacturing solutions for automotive, packaging and consumer goods industries.</p>
+            <p>Through this strategic alliance, we leverage synergies to deliver comprehensive solutions while promoting sustainable manufacturing practices.</p>
+            <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">
+              <span>Learn More</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
 
-        <div>
-          <div class="placeholder medium">
-           
+          <div class="partnership-visual reveal reveal-delay-2">
+            <div class="partnership-visual-inner">
+              <i class="fas fa-industry"></i>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
     <!-- VISION & MISSION -->
-    <section id="vision-mission" class="content" aria-labelledby="vmTitle">
+    <section id="vision-mission" class="vm-section" aria-labelledby="vmTitle">
       <div class="container">
-        <div class="section-title">
-          <h3 id="vmTitle">Our Vision & Mission</h3>
-          <p class="muted">Guiding principles that drive our success</p>
-        </div>
+        <div class="section-label reveal">Guiding Principles</div>
+        <h2 class="section-title reveal" id="vmTitle">Vision & Mission</h2>
+        <p class="section-subtitle reveal">The foundation of every decision we make</p>
 
         <div class="vm-grid">
-          <div class="vm-card">
+          <div class="vm-card reveal">
             <h4>Our Vision</h4>
-            <p>To be a leading multidisciplinary holding company recognized for excellence, innovation, and sustainable growth, creating lasting value for our stakeholders, partners, and communities. We aspire to be the preferred partner for businesses seeking integrated solutions across Africa and beyond.</p>
+            <p>To be a leading multidisciplinary holding company recognized for excellence, innovation, and sustainable growth, creating lasting value for our stakeholders, partners, and communities across Africa and beyond.</p>
           </div>
 
-          <div class="vm-card">
+          <div class="vm-card reveal reveal-delay-1">
             <h4>Our Mission</h4>
-            <p>To deliver world-class services and create sustainable value through diversified operations, strategic investments, and innovative solutions that address evolving market needs and contribute to economic development. We are committed to ethical business practices, environmental stewardship, and social responsibility.</p>
+            <p>To deliver world-class services and create sustainable value through diversified operations, strategic investments, and innovative solutions that address evolving market needs and contribute to economic development.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- VALUES -->
-    <section id="values" class="content" aria-labelledby="valTitle">
+    <section id="values" class="values-section" aria-labelledby="valTitle">
       <div class="container">
-        <div class="section-title">
-          <h3 id="valTitle">Our Values</h3>
-          <p class="muted">Principles that guide our business decisions and relationships</p>
-        </div>
+        <div class="section-label reveal">Our Culture</div>
+        <h2 class="section-title reveal" id="valTitle">Core Values</h2>
+        <p class="section-subtitle reveal">Principles that guide our business decisions</p>
 
         <div class="values-grid">
-          <div class="card">
-            <h4 style="color:var(--gold)">Innovation</h4>
-            <p class="muted">We embrace new ideas and technologies to stay ahead, continuously improving our services and solutions. We foster a culture of creativity and forward thinking.</p>
+          <div class="value-card reveal">
+            <div class="value-icon"><i class="fas fa-lightbulb"></i></div>
+            <h4>Innovation</h4>
+            <p>Embracing new ideas and technologies to stay ahead and continuously improve.</p>
           </div>
 
-          <div class="card">
-            <h4 style="color:var(--gold)">Integrity</h4>
-            <p class="muted">We conduct our business with honesty, transparency, and ethical practices, building trust with clients and partners. Our reputation is our most valuable asset.</p>
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4>Integrity</h4>
+            <p>Conducting business with honesty, transparency, and ethical practices.</p>
           </div>
 
-          <div class="card">
-            <h4 style="color:var(--gold)">Collaboration</h4>
-            <p class="muted">We believe in the power of partnerships and teamwork to achieve exceptional results. We work closely with clients, stakeholders, and communities to create shared value.</p>
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+            <h4>Collaboration</h4>
+            <p>Believing in the power of partnerships and teamwork for exceptional results.</p>
           </div>
 
-          <div class="card">
-            <h4 style="color:var(--gold)">Excellence</h4>
-            <p class="muted">We strive for the highest standards in everything we do, delivering quality and value to stakeholders. We continuously measure and improve our performance.</p>
+          <div class="value-card reveal reveal-delay-3">
+            <div class="value-icon"><i class="fas fa-trophy"></i></div>
+            <h4>Excellence</h4>
+            <p>Striving for the highest standards in everything we do.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CONTACT (Replaced Form with Contact Cards) -->
-    <section id="contact" class="content" aria-labelledby="contactTitle">
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section" aria-labelledby="contactTitle">
       <div class="container">
-        <div class="section-title">
-          <h3 id="contactTitle">Contact Us</h3>
-          <p class="muted">Get in touch to discuss how we can help your business thrive</p>
-        </div>
+        <div class="section-label reveal">Reach Out</div>
+        <h2 class="section-title reveal" id="contactTitle">Contact Us</h2>
+        <p class="section-subtitle reveal">Get in touch to discuss how we can help your business thrive</p>
 
-        <div class="contact-cards">
-          <div class="contact-card">
-            <div class="icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </div>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
             <h4>Our Office</h4>
-            <p>322 Erasmus Avenue<br>Unit 178, Celtisdal,<br>Centurion, South Africa</p>
+            <p>322 Erasmus Avenue<br>Unit 178, Celtisdal<br>Centurion, South Africa</p>
             <a href="https://maps.google.com/?q=322+Erasmus+Avenue+Centurion" target="_blank">View on Map</a>
           </div>
 
-         <div class="contact-card">
-            <div class="icon">
-              <i class="fas fa-envelope"></i>
-            </div>
+          <div class="contact-card reveal reveal-delay-1">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
             <h4>Email</h4>
             <p>info@cgholdings.co.za</p>
             <a href="mailto:info@cgholdings.co.za">Send Email</a>
           </div>
 
-         <!-- <div class="contact-card">
-            <div class="icon">
-              <i class="fas fa-clock"></i>
-            </div>
+          <div class="contact-card reveal reveal-delay-2">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
             <h4>Business Hours</h4>
-            <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: By Appointment<br>Sunday: Closed</p>
+            <p>Monday – Friday<br>8:00 AM – 5:00 PM<br>Saturday by Appointment</p>
             <a href="mailto:info@cgholdings.co.za">Schedule a Meeting</a>
           </div>
-        </div> -->
-
-       <!---<div class="social-links">
-          <a href="#" aria-label="LinkedIn" title="Connect on LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="#" aria-label="Twitter" title="Follow on Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="#" aria-label="Facebook" title="Like on Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="#" aria-label="Instagram" title="Follow on Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>-->
+        </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="content" aria-label="Call to action">
+    <section class="cta-section" aria-label="Call to action">
+      <div class="cta-bg"></div>
       <div class="container">
-        <div class="cta-section card">
-          <div style="display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap;">
-            <div style="flex:1; min-width:300px;">
-              <h3 style="margin:0;color:var(--gold);font-size:32px;">Ready to Partner with Excellence?</h3>
-              <p class="muted" style="margin:15px 0 0;font-size:18px;">Discover how Chauke Group Holdings can help your business thrive through diversified services and strategic approaches.</p>
-            </div>
-            <div>
-              <a class="btn" href="#contact" style="min-width:200px;">
-                <span>Contact Us Today</span>
-                <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
+        <div class="cta-inner reveal">
+          <h3>Ready to Partner with <span class="text-gradient">Excellence?</span></h3>
+          <p>Discover how Chauke Group Holdings can help your business thrive through diversified services and strategic approaches.</p>
+          <a href="#contact" class="btn btn-primary" style="min-width: 220px;">
+            <span>Contact Us Today</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- FOOTER - Original Design -->
-  <footer class="site-footer" role="contentinfo">
+  <!-- FOOTER -->
+  <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
-        <div>
-          <img src="logo.png" alt="Chauke Group Holdings logo" style="height:70px;margin-bottom:16px">
-          <p class="small">Driving sustainable development and economic growth across South Africa and beyond through diversified operations and strategic partnerships.</p>
+        <div class="footer-brand">
+          <img src="logo.png" alt="Chauke Group Holdings" />
+          <p>Driving sustainable development and economic growth across South Africa through diversified operations.</p>
         </div>
 
-        <div>
-          <h4 style="color:var(--gold)">Quick Links</h4>
-          <p><a href="#services">Our Services</a></p>
-          <p><a href="#overview">Overview</a></p>
-          <p><a href="#clients">Clients</a></p>
-          <p><a href="#timeline">History</a></p>
-          <p><a href="#vision-mission">Vision & Mission</a></p>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <a href="#services">Services</a>
+          <a href="#overview">Overview</a>
+          <a href="#clients">Clients</a>
+          <a href="#timeline">History</a>
+          <a href="#vision-mission">Vision & Mission</a>
         </div>
 
-        <div>
-          <h4 style="color:var(--gold)">Contact</h4>
-          <p class="small">📍 322 Erasmus Avenue, Unit 178, Celtisdal, Centurion, South Africa</p>
-          <p class="small">📧 info@cgholdings.co.za</p>
-          <p class="small">🕒 Mon-Fri: 8:00 AM - 5:00 PM</p>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="#">322 Erasmus Avenue, Centurion</a>
+          <a href="mailto:info@cgholdings.co.za">info@cgholdings.co.za</a>
+          <a href="#">Mon-Fri: 8AM-5PM</a>
         </div>
 
-        <div>
-          <h4 style="color:var(--gold)">Follow</h4>
-          <p><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-          <p><a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i> Twitter</a></p>
-          <p><a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i> Facebook</a></p>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
         </div>
       </div>
 
-      <div style="text-align:center;margin-top:40px;color:var(--muted);font-size:14px">
-        © <span id="year"></span> Chauke Group Holdings. All Rights Reserved. | <a href="#" style="color:var(--muted)">Privacy Policy</a> | <a href="#" style="color:var(--muted)">Terms of Service</a>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Chauke Group Holdings. All Rights Reserved.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
       </div>
-      
-      <!-- Design Credit -->
-      <div class="design-credit">
-        Website designed by <a href="https://ayocreativedesigns.com" target="_blank" rel="noopener">Ayo Creative Designs Agency</a>
+
+      <div style="text-align: center; margin-top: 1.5rem; color: var(--text-muted); font-size: 0.75rem;">
+        Website designed by <a href="https://ayocreativedesigns.com" target="_blank" rel="noopener" style="color: var(--gold-400);">Ayo Creative Designs Agency</a>
       </div>
     </div>
   </footer>
 
-  <!-- Enhanced JS -->
+  <!-- JAVASCRIPT -->
   <script>
     (function() {
+      'use strict';
+
       // Loading screen
       window.addEventListener('load', function() {
         setTimeout(function() {
-          document.getElementById('loading').classList.add('hide');
-        }, 1200);
+          document.getElementById('loading').classList.add('hidden');
+        }, 800);
       });
 
       // Year
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Calculate years dynamically from founding year (2016)
-      function updateYearsOfExcellence() {
-        const foundingYear = 2016;
-        const currentYear = new Date().getFullYear();
-        const yearsInBusiness = currentYear - foundingYear;
-        
-        // Update the stat counter
-        const yearsStatEl = document.getElementById('yearsOfExcellence');
-        if (yearsStatEl) {
-          yearsStatEl.setAttribute('data-target', yearsInBusiness);
-          yearsStatEl.textContent = yearsInBusiness;
-        }
-        
-        // Update the text experience
-        const yearsTextEl = document.getElementById('yearsExperienceText');
-        if (yearsTextEl) {
-          yearsTextEl.textContent = yearsInBusiness;
-        }
-      }
-      
-      // Call on page load
-      updateYearsOfExcellence();
-
-      // Enhanced Sticky Header with scroll effect
+      // Header behavior
       const header = document.getElementById('mainHeader');
       let lastScroll = 0;
-      
-      window.addEventListener('scroll', function() {
+      let ticking = false;
+
+      function updateHeader() {
         const currentScroll = window.pageYOffset;
-        
-        // Add scrolled class for background change
+
         if (currentScroll > 50) {
           header.classList.add('scrolled');
         } else {
           header.classList.remove('scrolled');
         }
-        
-        // Hide/show header on scroll
-        if (currentScroll > lastScroll && currentScroll > 100) {
-          // Scrolling down
-          header.style.transform = 'translateY(-100%)';
+
+        if (currentScroll > lastScroll && currentScroll > 200) {
+          header.classList.add('hidden');
         } else {
-          // Scrolling up
-          header.style.transform = 'translateY(0)';
+          header.classList.remove('hidden');
         }
-        
+
         lastScroll = currentScroll;
+        ticking = false;
+      }
+
+      window.addEventListener('scroll', function() {
+        if (!ticking) {
+          requestAnimationFrame(updateHeader);
+          ticking = true;
+        }
       });
 
       // Mobile menu
       const mobileToggle = document.getElementById('mobileToggle');
       const nav = document.getElementById('mainNav');
-      if(mobileToggle) {
-        mobileToggle.addEventListener('click', function(){
+
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', function() {
           const expanded = this.getAttribute('aria-expanded') === 'true';
           this.setAttribute('aria-expanded', String(!expanded));
-          if(nav.style.display === 'flex'){ 
-            nav.style.display = ''; 
-          } else { 
-            nav.style.display = 'flex'; 
-            nav.style.flexDirection = 'column'; 
-            nav.style.gap = '15px'; 
-            nav.style.background = 'var(--card)'; 
-            nav.style.padding = '25px'; 
-            nav.style.position = 'fixed'; 
-            nav.style.right = '20px'; 
-            nav.style.top = '90px'; 
-            nav.style.boxShadow = '0 20px 40px rgba(0,0,0,0.2)'; 
+
+          if (nav.style.display === 'flex') {
+            nav.style.display = '';
+          } else {
+            nav.style.display = 'flex';
+            nav.style.flexDirection = 'column';
+            nav.style.position = 'fixed';
+            nav.style.top = '80px';
+            nav.style.right = '1.5rem';
+            nav.style.background = 'var(--glass-bg)';
+            nav.style.backdropFilter = 'blur(24px)';
+            nav.style.padding = '1.5rem';
             nav.style.borderRadius = '16px';
-            nav.style.border = '1px solid var(--border)';
-            nav.style.zIndex = '1000';
-            nav.style.minWidth = '250px';
+            nav.style.border = '1px solid var(--glass-border)';
+            nav.style.boxShadow = '0 24px 48px rgba(0,0,0,0.4)';
+            nav.style.minWidth = '220px';
+            nav.style.zIndex = '999';
+            nav.style.gap = '0.5rem';
           }
         });
       }
 
-      // Smooth scroll for internal links with offset for sticky header
+      // Smooth scroll
       document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', function(e){
+        a.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
-          if(href.length > 1){
+          if (href.length > 1) {
             e.preventDefault();
             const el = document.querySelector(href);
-            if(el){
+            if (el) {
               const offset = 100;
               const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
-              window.scrollTo({top, behavior: 'smooth'});
-              
-              // Close mobile menu if open
-              if(nav.style.display === 'flex'){
+              window.scrollTo({ top, behavior: 'smooth' });
+
+              if (nav && nav.style.display === 'flex') {
                 nav.style.display = '';
-                mobileToggle.setAttribute('aria-expanded', 'false');
+                if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
               }
             }
           }
         });
       });
 
-      // Scroll to top button
+      // Scroll to top
       const scrollTopBtn = document.getElementById('scrollTop');
       window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 500) {
-          scrollTopBtn.classList.add('show');
+        if (window.pageYOffset > 600) {
+          scrollTopBtn.classList.add('visible');
         } else {
-          scrollTopBtn.classList.remove('show');
+          scrollTopBtn.classList.remove('visible');
         }
       });
-      
       scrollTopBtn.addEventListener('click', function() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       });
 
-      // Stat counters (animate when scrolled into view)
+      // Scroll reveal
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // Counter animation
       const counters = document.querySelectorAll('.count');
       const animateCount = (el, target) => {
         let current = 0;
-        const duration = 1800;
+        const duration = 2000;
         const step = Math.max(1, Math.floor(target / (duration / 16)));
         const id = setInterval(() => {
           current += step;
-          if(current >= target){ 
-            current = target; 
-            clearInterval(id); 
+          if (current >= target) {
+            current = target;
+            clearInterval(id);
           }
           el.textContent = current;
         }, 16);
       };
 
-      const obs = new IntersectionObserver((entries, o) => {
+      const counterObserver = new IntersectionObserver((entries, o) => {
         entries.forEach(en => {
-          if(en.isIntersecting){
+          if (en.isIntersecting) {
             const el = en.target;
-            const target = parseInt(el.getAttribute('data-target'),10) || 0;
+            const target = parseInt(el.getAttribute('data-target'), 10) || 0;
             animateCount(el, target);
             o.unobserve(el);
           }
         });
-      }, {threshold:0.3});
+      }, { threshold: 0.3 });
 
-      counters.forEach(c => obs.observe(c));
+      counters.forEach(c => counterObserver.observe(c));
 
-      // Accessibility: close mobile nav on resize
+      // Dynamic years calculation
+      function updateYears() {
+        const foundingYear = 2016;
+        const currentYear = new Date().getFullYear();
+        const yearsInBusiness = currentYear - foundingYear;
+
+        const yearsStatEl = document.querySelector('[data-target="10"]');
+        if (yearsStatEl) {
+          yearsStatEl.setAttribute('data-target', yearsInBusiness);
+        }
+      }
+      updateYears();
+
+      // Close mobile nav on resize
       window.addEventListener('resize', () => {
-        if(window.innerWidth > 880){
+        if (window.innerWidth > 768 && nav) {
           nav.style.display = '';
-          if(mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
+          if (mobileToggle) mobileToggle.setAttribute('aria-expanded', 'false');
         }
       });
 
-      // Add hover effects to cards
-      document.querySelectorAll('.card, .service-card, .contact-card').forEach(card => {
-        card.addEventListener('mouseenter', function() {
-          this.style.zIndex = '10';
-        });
-        card.addEventListener('mouseleave', function() {
-          this.style.zIndex = '';
-        });
-      });
+      // Parallax glow orbs
+      const orbs = document.querySelectorAll('.glow-orb');
+      let orbTicking = false;
 
-      // Add animation on scroll for elements
-      const animatedElements = document.querySelectorAll('.service-card, .contact-card, .stat, .vm-card');
-      const fadeObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.8s ease-out';
-          }
-        });
-      }, { threshold: 0.1 });
-
-      animatedElements.forEach(el => fadeObserver.observe(el));
-
-      // Simple email copy functionality for contact
-      document.querySelectorAll('.contact-card a[href^="mailto"]').forEach(link => {
-        link.addEventListener('click', function(e) {
-          const email = 'info@cgholdings.co.za';
-          navigator.clipboard.writeText(email).then(() => {
-            const originalText = this.textContent;
-            this.textContent = 'Email Copied!';
-            setTimeout(() => {
-              this.textContent = originalText;
-            }, 2000);
-          }).catch(err => {
-            console.log('Failed to copy email: ', err);
+      window.addEventListener('scroll', () => {
+        if (!orbTicking) {
+          requestAnimationFrame(() => {
+            const scrollY = window.pageYOffset;
+            orbs.forEach((orb, i) => {
+              const speed = 0.02 + (i * 0.01);
+              orb.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
+            });
+            orbTicking = false;
           });
-        });
+          orbTicking = true;
+        }
       });
 
     })();
-
-
-    // Clients Carousel Enhancement
-(function() {
-  // Duplicate client items for better seamless looping
-  const clientRows = document.querySelectorAll('.clients-row');
-  
-  clientRows.forEach((row, index) => {
-    const track = row.querySelector('.clients-track');
-    const items = track.querySelectorAll('.client-item');
-    
-    // Clone items and append to track for smoother loop
-    items.forEach(item => {
-      const clone = item.cloneNode(true);
-      track.appendChild(clone);
-    });
-    
-    // Add unique class to each row for different animation speeds
-    row.classList.add(`row-${index + 1}`);
-  });
-  
-  // Optional: Add interaction - pause on hover, resume on mouse leave
-  clientRows.forEach(row => {
-    row.addEventListener('mouseenter', () => {
-      const track = row.querySelector('.clients-track');
-      track.style.animationPlayState = 'paused';
-    });
-    
-    row.addEventListener('mouseleave', () => {
-      const track = row.querySelector('.clients-track');
-      track.style.animationPlayState = 'running';
-    });
-  });
-  
-  // Adjust animation speed based on viewport width
-  function adjustAnimationSpeeds() {
-    const width = window.innerWidth;
-    
-    clientRows.forEach((row, index) => {
-      const track = row.querySelector('.clients-track');
-      
-      if (width < 576) {
-        // Mobile
-        track.style.animationDuration = `${25 + (index * 5)}s`;
-      } else if (width < 768) {
-        // Tablet
-        track.style.animationDuration = `${30 + (index * 5)}s`;
-      } else if (width < 992) {
-        // Small desktop
-        track.style.animationDuration = `${35 + (index * 5)}s`;
-      } else {
-        // Desktop
-        track.style.animationDuration = `${40 + (index * 5)}s`;
-      }
-    });
-  }
-  
-  // Run on load and resize
-  window.addEventListener('load', adjustAnimationSpeeds);
-  window.addEventListener('resize', adjustAnimationSpeeds);
-})();
   </script>
 </body>
 </html>
